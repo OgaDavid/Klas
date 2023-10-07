@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Icons } from "@/components/icons";
+import Stats from "@/components/stats";
 
 export default function HomePage() {
   return (
@@ -60,6 +61,7 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+        <Stats />
     </main>
   )
 }

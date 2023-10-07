@@ -7,7 +7,7 @@ import { siteConfig } from "@/config/site";
 const Footer = () => {
   return (
     <footer className="bg-brand-blue-200">
-      <div className="_container">
+      <div className="container">
         <div className="py-10 sm:p-10 w-[85%] mx-auto">
           <div className="flex justify-between">
             <Link href="/">

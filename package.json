@@ -22,6 +22,7 @@
     "framer-motion": "^10.16.4",
     "next": "13.5.4",
     "react": "^18",
+    "react-countup": "^6.4.2",
     "react-dom": "^18",
     "semantic-release": "^22.0.5",
     "tailwind-merge": "^1.14.0",
