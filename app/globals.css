@@ -74,3 +74,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+.footer_navlink {
+  @apply text-sm transition-all duration-300 text-white font-normal hover:text-[hsla(0,0%,100%,.5)]
+}
+
+.gradient {
+  background: linear-gradient(1turn, #7344fc, #1127E3);
+}
