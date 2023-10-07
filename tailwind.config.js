@@ -12,10 +12,13 @@ module.exports = {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        "2xl": "1300px",
       },
     },
     extend: {
+      screens: {
+        "md-800": "800px",
+      },
       colors: {
         brand: {
           'blue': {
