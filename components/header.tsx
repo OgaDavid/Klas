@@ -5,9 +5,12 @@ import { useState } from "react";
 import { docsConfig } from "@/config/docs";
 import { Icons } from "./icons";
 import MainNav from "./main-nav";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <>
@@ -63,7 +66,12 @@ const Header = () => {
               {docsConfig.mainNav.map(({ title, href }) => (
                 <li onClick={() => setIsOpen(false)} className="" key={title}>
                   <Link
-                    className="text-lg font-medium text-brand-gray-100 p-1 active:text-blue-100 hover:text-brand-blue-100 transition-all duration-300"
+                    className={cn(
+                      "text-lg font-semibold p-1 hover:text-brand-blue-100 transition-all duration-300",
+                      pathname === href
+                        ? "text-brand-blue-100"
+                        : "text-brand-gray-100"
+                    )}
                     href={href}
                   >
                     {title}

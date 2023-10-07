@@ -92,7 +92,7 @@
 }
 
 .navlink {
-  @apply text-brand-gray-100 font-semibold text-sm min-[1150px]:text-base active:text-brand-blue-100 hover:text-brand-blue-100 transition-all duration-300;
+  @apply font-semibold text-sm min-[1150px]:text-base hover:text-brand-blue-100 transition-all duration-300;
 }
 
 .gradient {
