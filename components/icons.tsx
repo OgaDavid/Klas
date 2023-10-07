@@ -434,4 +434,18 @@ export const Icons = {
       ></path>
     </svg>
   ),
+  chevron_right: (props: IconProps) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      fill="none"
+      {...props}
+    >
+      <path
+        fill="#fff"
+        d="m9.29 8.119 3.88 3.88-3.88 3.88a.996.996 0 1 0 1.41 1.41l4.59-4.59a.996.996 0 0 0 0-1.41l-4.59-4.59a.996.996 0 0 0-1.41 0c-.38.39-.39 1.03 0 1.42Z"
+      ></path>
+    </svg>
+  ),
 };

@@ -104,3 +104,13 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.grid_row_1 {
+  grid-row: 1;
+}
+
+@media screen and (max-width: 920px) {
+  .grid_row_1 {
+    grid-row: auto;
+  }
+}

@@ -18,6 +18,7 @@ module.exports = {
     extend: {
       screens: {
         "md-800": "800px",
+        "md-920": "920px",
       },
       colors: {
         brand: {
