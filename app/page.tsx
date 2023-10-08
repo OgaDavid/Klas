@@ -5,7 +5,14 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Icons } from "@/components/icons";
 import Stats from "@/components/stats";
-import { ExplainerData } from "@/data/data";
+import {
+  BeforeData,
+  ExplainerData,
+  FeaturesData,
+  Features_Section_one,
+  Features_Section_two,
+} from "@/data/data";
+import { Feature, FeatureCard } from "@/components/feature-card";
 
 export default function HomePage() {
   return (
@@ -44,7 +51,7 @@ export default function HomePage() {
                   Sign up free
                 </Link>
                 <Link
-                  className="text-white flex gap-[5px] hover:gap-[10px] duration-300 transition-all justify-center items-center text-base font-bold"
+                  className="text-white flex gap-[2px] hover:gap-[4px] duration-300 transition-all justify-center items-center text-base font-bold"
                   href="https://calendly.com/nathanstark101/chat"
                 >
                   Request demo
@@ -92,7 +99,7 @@ export default function HomePage() {
                 >
                   <div>
                     <Image
-                    className="w-full"
+                      className="w-full"
                       src={item.image}
                       width={500}
                       height={254.33}
@@ -108,6 +115,101 @@ export default function HomePage() {
                     </p>
                   </div>
                 </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="container mb-[160px]">
+          <div>
+            <div>
+              <h3 className="text-center font-medium text-[32px] leading-[42px] mb-[45px]">
+                Before
+              </h3>
+              <div className="grid max grid-cols-5 max-lg-1150:gap-[10px] gap-y-[20px] lg-1150:grid-cols-11 lg-1150:gap-x-[40px] place-items-center">
+                {BeforeData.map((item) => (
+                  <>
+                    <div className="flex flex-col gap-4 items-center justify-center">
+                      <div className="w-[63px] h-[63px] lg-1150:w-[90px] lg-1150:h-[90px] grid place-items-center p-4 lg-1150:p[22px] bg-white shadow-md rounded-[50%]">
+                        <Image
+                          width={46}
+                          height={46}
+                          src={item.img}
+                          alt={item.name}
+                        />
+                      </div>
+                      <p className="lg-1150:text-base text-[12px] leading-[15px] lg-110:leading-[23px] whitespace-nowrap">
+                        {item.name}
+                      </p>
+                    </div>
+                    {item.span && (
+                      <span
+                        className={`${
+                          item.remove_Span ? "max-lg-1150:hidden" : ""
+                        } text-[28px]`}
+                      >
+                        +
+                      </span>
+                    )}
+                  </>
+                ))}
+              </div>
+            </div>
+            <div className="mt-[80px] flex flex-col items-center">
+              <h3 className="text-center font-medium text-[32px] leading-[42px] mb-[45px]">
+                Now
+              </h3>
+              <Image
+                width={90}
+                height={90}
+                className="mb-4"
+                src="images/klas-logo.svg"
+                alt="logo"
+              />
+              <p className="text-lg">All you need is Klas</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="">
+          <div className="pb-[120px]">
+            <div className="flex items-center justify-center">
+              <h2 className="text-[32px] leading-[42px] font-bold text-center md:text-5xl md:leading-[62px]">
+                With you from first student to full scale
+              </h2>
+            </div>
+          </div>
+          <div className="container">
+            {Features_Section_one.map((featureData) => (
+              <Feature key={featureData.id} data={featureData} />
+            ))}
+          </div>
+        </div>
+
+        <div className="gradient pt-[160px] mb-[160px] pb-[10px]">
+          <div className="container text-white">
+            {Features_Section_two.map((featureData) => (
+              <Feature key={featureData.id} data={featureData} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="container">
+          <div className="pb-[120px]">
+            <div>
+              <h2 className="text-[32px] leading-[42px] font-bold text-center md:text-5xl md:leading-[62px]">
+                And many more features
+              </h2>
+            </div>
+            <div className="mt-[80px] grid features_grid gap-6">
+              {FeaturesData.map((cardData) => (
+                <FeatureCard data={cardData} key={cardData.heading} />
               ))}
             </div>
           </div>
