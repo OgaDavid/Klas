@@ -76,7 +76,7 @@
 }
 
 .container {
-  @apply max-w-[1300px] mx-auto py-0 px-[20px] min-[950px]:px-[40px];
+  @apply max-w-[1300px] mx-auto py-0 px-[20px] md-920:px-[40px];
 }
 
 .header {
@@ -92,7 +92,7 @@
 }
 
 .navlink {
-  @apply font-semibold text-sm min-[1150px]:text-base hover:text-brand-blue-100 transition-all duration-300;
+  @apply font-semibold text-sm lg-1150:text-base hover:text-brand-blue-100 transition-all duration-300;
 }
 
 .gradient {
@@ -111,6 +111,11 @@
 
 .grid_row_1 {
   grid-row: 1;
+}
+
+.explainer_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
 }
 
 @media screen and (max-width: 920px) {

@@ -1,5 +1,6 @@
 import React from "react";
 import CountUp from "react-countup";
+import { CompaniesImages as images } from "@/data/data";
 
 export default function Stats() {
   return (
@@ -22,7 +23,7 @@ export default function Stats() {
                 <CountUp end={2200} duration={2} enableScrollSpy={true} />+
               </h3>
               <p className="text-[20px] leading-[26px] text-[rgba(0,0,0,.8)] max-md:text-base">
-                Virtual academies
+                Online academies
               </p>
             </div>
             <div className="flex flex-col h-[100px] pl-[20px] justify-center relative">
@@ -35,11 +36,11 @@ export default function Stats() {
               </p>
             </div>
           </div>
-          {/* <div className="flex items-center justify-center lg-1150:justify-between gap-[40px] flex-wrap">
-                {images.map(({ name, url }) => (
-                  <img key={name} alt={name} src={url} />
-                ))}
-              </div> */}
+          <div className="flex items-center justify-center min-[1150]:justify-between gap-[40px] flex-wrap">
+            {images.map(({ name, url }) => (
+              <img key={name} alt={name} src={url} />
+            ))}
+          </div>
         </div>
       </div>
     </section>

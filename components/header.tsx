@@ -25,15 +25,15 @@ const Header = () => {
               <span className="sr-only">Klas</span>
             </span>
             <MainNav />
-            <div className="flex max-md-800:hidden gap-[10px] transition-all duration-300 min-[1150px]:gap-8 items-center">
+            <div className="flex max-md-800:hidden gap-[10px] transition-all duration-300 lg-1150:gap-8 items-center">
               <Link
-                className="text-sm min-[1150px]:text-base text-brand-blue-100 font-medium"
+                className="text-sm lg-1150:text-base text-brand-blue-100 font-semibold"
                 href="/login"
               >
                 Login
               </Link>
               <Link
-                className="text-sm min-[1150px]:text-base font-medium text-white bg-brand-blue-200 py-4 px-8 rounded-[8px]"
+                className="text-sm lg-1150:text-base font-medium text-white bg-brand-blue-200 py-4 px-8 rounded-[8px]"
                 href="/signup"
               >
                 Sign up free

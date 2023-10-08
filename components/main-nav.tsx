@@ -8,7 +8,7 @@ export default function MainNav() {
   const pathname = usePathname();
   return (
     <nav className="max-md-800:hidden">
-      <ul className="flex transition-all duration-300 gap-[10px] min-[1150px]:gap-[30px]">
+      <ul className="flex transition-all duration-300 gap-[10px] lg-1150:gap-[30px]">
         {docsConfig.mainNav.map(({ title, href }) => (
           <li key={title}>
             <Link
