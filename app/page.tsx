@@ -13,6 +13,7 @@ import {
   Features_Section_two,
 } from "@/data/data";
 import { Feature, FeatureCard } from "@/components/feature-card";
+import CallToAction from "@/components/call-to-action";
 
 export default function HomePage() {
   return (
@@ -215,6 +216,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <CallToAction />
     </main>
   );
 }
