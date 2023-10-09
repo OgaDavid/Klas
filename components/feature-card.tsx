@@ -45,7 +45,7 @@ export const Feature = ({ data }: FeatureProps) => {
   return (
     <div className="mb-[160px]">
       <div
-        className={`flex flex-col items-center gap-[70px] lg-1150:gap-[100px] ${
+        className={`flex flex-col md:items-center gap-[70px] lg-1150:gap-[100px] ${
           data.reverse ? "md:flex-row-reverse" : "md:flex-row"
         }`}
       >
@@ -67,11 +67,11 @@ export const Feature = ({ data }: FeatureProps) => {
 
 export const FeatureCard = ({ data }: FeatureCardProps) => {
   return (
-    <div className="bg-[#f8f9f9] flex flex-col gap-[50px] py-[40px] px-[30px] runded-[3px]">
+    <div className="bg-[#f8f9f9] flex flex-col gap-[50px] py-[40px] px-[30px] rounded-[8px]">
       <Image
         width={330}
         height={165}
-        className="object-contain aspect-[2/1]"
+        className="w-full object-contain aspect-[2/1]"
         src={data.img}
         alt={data.heading}
       />

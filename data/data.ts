@@ -202,3 +202,28 @@ export const FeaturesData = [
     paragraph: "Track your student attendance, learning progress, and more.",
   },
 ];
+
+
+export const Testimonials = [
+  {
+    testimony:
+      "Klas is a brilliant platform for creators to share and monetize their expertise. The technology is fabulous and team is very professional. Delighted to be a partner.",
+    name: "Haryy Stamper",
+    company: "CEO, Holistic Academy",
+    img: "/images/person1.png",
+  },
+  {
+    testimony:
+      "Working with Klas has been one of the spotlights of the year for Codenovation. The platform is easy to use, seamless, and has excellent customer service. Thanks for making it easy to teach online.",
+    name: "Shola Akinrolie",
+    company: "Founder, Codenovation",
+    img: "/images/person2.png",
+  },
+  {
+    testimony:
+      "Great UI, easy to use, and straightforward. Excited to host more mandarin class on Klas.",
+    name: "Margaret Anavhe",
+    company: "Mandarin Speaker",
+    img: "/images/person3.png",
+  },
+];

@@ -14,6 +14,7 @@ import {
 } from "@/data/data";
 import { Feature, FeatureCard } from "@/components/feature-card";
 import CallToAction from "@/components/call-to-action";
+import TestimonialSection from "@/components/testimonial-section";
 
 export default function HomePage() {
   return (
@@ -216,6 +217,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <TestimonialSection />
 
       <CallToAction />
     </main>
