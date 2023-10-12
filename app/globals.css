@@ -109,6 +109,12 @@
   transform: translate(-50%, -50%);
 }
 
+.fixed_center {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .grid_row_1 {
   grid-row: 1;
 }
@@ -130,6 +136,15 @@
   @apply flex flex-col justify-center items-center rounded-[8px] py-[65px] max-md:px-[26px] md:p-[104px];
   background: rgba(17, 39, 227, 0.15);
 }
+
+.pricing-list li {
+  @apply flex text-left font-normal text-base leading-[18px] items-start justify-start mb-[22px] gap-[18px]
+}
+
+.box-shadow {
+  box-shadow: 0 4px 20px rgba(0,0,0,.1);
+}
+
 
 @media screen and (max-width: 920px) {
   .grid_row_1 {

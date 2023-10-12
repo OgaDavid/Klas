@@ -448,4 +448,21 @@ export const Icons = {
       ></path>
     </svg>
   ),
+  check: (props: IconProps) => (
+    <svg
+      width="16"
+      height="17"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="m2.668 8.973 4 4 6.667-8"
+        stroke="#1127E3"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></path>
+    </svg>
+  ),
 };
