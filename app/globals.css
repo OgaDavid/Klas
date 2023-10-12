@@ -141,6 +141,10 @@
   @apply flex text-left font-normal text-base leading-[18px] items-start justify-start mb-[22px] gap-[18px]
 }
 
+.pricing-sub-list {
+  list-style: decimal;
+}
+
 .box-shadow {
   box-shadow: 0 4px 20px rgba(0,0,0,.1);
 }

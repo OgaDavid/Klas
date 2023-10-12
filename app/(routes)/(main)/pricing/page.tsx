@@ -37,31 +37,33 @@ const PricingPage = () => {
                   Try for Free
                 </Link>
               </div>
-              <div className=" flex flex-col justify-start items-center w-full">
-                <ul className="pricing-list">
+              <div className=" flex flex-col justify-start items-start w-full">
+                <ul className="pricing-list px-[28px]">
                   <li>
                     <Icons.check />
-                    Host up to 50 students per class
+                    5% transaction fee
                   </li>
                   <li>
                     <Icons.check />
-                    Time limit is 40 mins
+                    Sell ebooks
                   </li>
+                  <ul className="pl-7">
+                    <li>• Unlimited ebooks</li>
+                    <li>• Unlimited students per ebook</li>
+                    <li>• Sales page for enrollments</li>
+                  </ul>
                   <li>
                     <Icons.check />
-                    Unlimited classes
+                    Sell recorded courses
                   </li>
+                  <ul className="pl-7">
+                    <li>• Unlimited courses</li>
+                    <li>• Unlimited students per course</li>
+                    <li>• Sales page for enrolment</li>
+                  </ul>
                   <li>
                     <Icons.check />
-                    Easy scheduling
-                  </li>
-                  <li>
-                    <Icons.check />
-                    Accept payments via Stripe
-                  </li>
-                  <li>
-                    <Icons.check />
-                    Beautiful booking pages
+                    Accept payments online
                   </li>
                   <li>
                     <Icons.check />
@@ -73,15 +75,7 @@ const PricingPage = () => {
                   </li>
                   <li>
                     <Icons.check />
-                    Resources library for docs, videos
-                  </li>
-                  <li>
-                    <Icons.check />
                     Student dashboard
-                  </li>
-                  <li>
-                    <Icons.check />
-                    10% transaction fee on bookings
                   </li>
                 </ul>
               </div>
@@ -114,42 +108,38 @@ const PricingPage = () => {
                   Get Started
                 </Link>
               </div>
-              <div className=" flex flex-col justify-start items-center w-full">
-                <small className="mb-[25px] text-base leading-[18px] font-bold">
+              <div className=" flex flex-col justify-start items-start w-full">
+                <small className="mb-[25px] mx-auto text-base leading-[18px] font-bold">
                   Everything in Free, including
                 </small>
-                <ul className="pricing-list">
+                <ul className="pricing-list px-[28px]">
                   <li>
                     <Icons.check />
-                    Host up to 500 students per class
+                    3% transaction fee
                   </li>
                   <li>
                     <Icons.check />
-                    Time limit is 2 hours
+                    Host unlimited classes
                   </li>
-                  <li>
-                    <Icons.check />
-                    Unlimited classes
-                  </li>
+                  <ul className="pl-7">
+                    <li>• Host up to 100 students per class</li>
+                    <li>• Instant recording & cloud storage</li>
+                    <li>• Time limit is 2 hours</li>
+                  </ul>
                   <li>
                     <Icons.check />
                     Custom branding
                   </li>
                   <li>
                     <Icons.check />
-                    Detailed class insights & analytics
+                    Integrated email marketing
+                  </li>
+                  <li>
+                    <Icons.check />5 admin & instructor seats
                   </li>
                   <li>
                     <Icons.check />
-                    Class recordings and cloud storage
-                  </li>
-                  <li>
-                    <Icons.check />
-                    Email marketing Email marketing
-                  </li>
-                  <li>
-                    <Icons.check />
-                    3% transaction fee on bookings
+                    Team reports & analytics
                   </li>
                 </ul>
               </div>
@@ -176,11 +166,11 @@ const PricingPage = () => {
                   Coming Soon
                 </Link>
               </div>
-              <div className=" flex flex-col justify-start items-center w-full">
-                <small className="mb-[25px] text-base leading-[18px] font-bold">
+              <div className=" flex flex-col justify-start items-start w-full">
+                <small className="mb-[25px] mx-auto text-base leading-[18px] font-bold">
                   Everything in Pro, including
                 </small>
-                <ul className="pricing-list">
+                <ul className="pricing-list px-[28px]">
                   {PlusPerks.map((perk, index) => (
                     <li key={index}>
                       <Icons.check />
