@@ -24,7 +24,7 @@ export function FAQ({
           {faqs.map((faq) => (
             <div key={faq.id}>
               <AccordionItem className="px-5 md:px-[60px]" value={faq.id}>
-                <AccordionTrigger className="py-[25px] text-start pr-[40px] text-lg leading-[20px] font-medium md:font-semibold">
+                <AccordionTrigger className="py-[25px] gap-10 text-start text-lg leading-[20px] font-medium md:font-semibold">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-base text-left font-light text-[rgba(0,0,0,.741)]">{faq.answer}</AccordionContent>
