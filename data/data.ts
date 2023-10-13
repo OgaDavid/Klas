@@ -236,13 +236,3 @@ export const PlusPerks = [
   "Run multiple academies in one account",
   "Custom domain",
 ];
-
-export const ProPerks = [
-  "3% transaction fee",
-  "Host unlimited classes",
-  "Custom branding",
-  "Integrated email marketings",
-  "5 admin & instructor seatss",
-  "Team reports & analytics",
-  "Custom domain",
-];

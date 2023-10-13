@@ -54,11 +54,6 @@ export const metadata: Metadata = {
     images: [siteConfig.ogImage],
     creator: "@klas_hq",
   },
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
-  },
   manifest: `${siteConfig.url}/site.webmanifest`,
 };
 
