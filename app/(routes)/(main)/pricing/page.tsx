@@ -6,7 +6,8 @@ import CallToAction from "@/components/call-to-action";
 import PageHeaders from "@/components/page-headers";
 import Image from "next/image";
 import { Icons } from "@/components/icons";
-import { PlusPerks } from "@/data/data";
+import { PlusPerks, PricingFAQ } from "@/data/data";
+import { FAQ } from "@/components/faq";
 
 const PricingPage = () => {
   return (
@@ -185,6 +186,8 @@ const PricingPage = () => {
       </section>
 
       {/* <FrequentlyAskedQuestions data={PricingFaqData} /> */}
+
+      <FAQ faqs={PricingFAQ} />
 
       <CallToAction />
     </main>
