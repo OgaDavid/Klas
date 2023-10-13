@@ -16,7 +16,7 @@ const Header = () => {
     <>
       <div className="header absolute-center container z-20">
         <header className="z-50">
-          <div className="py-3 px-7 md-800:px-10 bg-white rounded-[8px] border border-[#00000014] flex justify-between w-full items-center">
+          <div className="py-3 shadow-md px-7 md-800:px-10 bg-white rounded-[8px] border border-[#00000014] flex justify-between w-full items-center">
             <span>
               <span>
                 <Icons.logo_main className="max-md-800:hidden" />
