@@ -312,3 +312,60 @@ export const CompanyFAQ = [
       "Yes you can record your classes on Klas. Once your class ends, you can then either download the class recording immediately or if the file is too big, you can auto-upload the class recording to YouTube.",
   },
 ];
+
+export const CaseStudiesData = [
+  {
+    companyName: "DesignPal",
+    link: "https://www.designpal.com/",
+    about:
+      "DesignPal is an online design school with a goal to train over 100k designers globally using Klas.",
+    category: "Online school",
+    imageSrc: "/case-study/design-pal-bg.jpg",
+    overlayImg: "/case-study/designpal.svg",
+  },
+  {
+    companyName: "AI School Africa",
+    link: "https://phcschoolofai.org/",
+    about:
+      "AI School is an online community that trains thousands of aspiring ML engineers in Africa using Klas.",
+    category: "Community",
+    imageSrc: "/case-study/ai-school-bg.png",
+    overlayImg: "/case-study/ai-school-white.svg",
+  },
+  {
+    companyName: "DevCareer",
+    link: "https://devcareer.io/",
+    about:
+      "DevCareer is one of the biggest coding communities in Africa with over 10k active members. They use Klas for their virtual bootcamps & classes.",
+    category: "Community",
+    imageSrc: "/case-study/devcareers-bg.png",
+    overlayImg: "/case-study/dev-career.svg",
+  },
+  {
+    companyName: "TDev",
+    link: "https://www.tdev228.org/",
+    about:
+      "TDev is one of the biggest coding communities in Togo. They use Klas to host virtual bootcamps & classes for their thousands of students.",
+    category: "Community",
+    imageSrc: "/case-study/t-dev-bg.png",
+    overlayImg: "/case-study/t-dev.svg",
+  },
+  {
+    companyName: "No Code Academy",
+    link: "https://nocodeacad.com/",
+    about:
+      "No Code Academy is an online school that trains entrepreneurs to build functional products using no code tools. They use Klas to host virtual bootcamps & classes for students.",
+    category: "Online school",
+    imageSrc: "/case-study/no-code-bg.png",
+    overlayImg: "/case-study/no-code.svg",
+  },
+  {
+    companyName: "GenZtechies",
+    link: "https://www.genztechies.com/",
+    about:
+      "GenZtechies is the biggest tech community in Africa for Gen Z. They use Klas to host virtual bootcamps, classes, & workshops for their members.",
+    category: "Community",
+    imageSrc: "/case-study/genz-bg.jpg",
+    overlayImg: "/case-study/genz.svg",
+  },
+];

@@ -149,6 +149,20 @@
   box-shadow: 0 4px 20px rgba(0,0,0,.1);
 }
 
+.box-shadow-two {
+  box-shadow: 0 4px 20px rgba(0,0,0,.08);
+}
+
+.scale-image:hover img {
+  transform: scale(1.05);
+  transition: all .8s ease-in;
+  cursor: pointer;
+}
+
+.case-study-card {
+  -webkit-filter: drop-shadow(0 4px 25px rgba(0,0,0,.1))!important
+}
+
 
 @media screen and (max-width: 920px) {
   .grid_row_1 {

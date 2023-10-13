@@ -26,7 +26,7 @@ const CompanyPage = () => {
                 <Image
                   width={402}
                   height={600}
-                  src="images/d1.svg"
+                  src="/company/d1.svg"
                   alt="metrics images"
                 />
               </div>
@@ -34,7 +34,7 @@ const CompanyPage = () => {
                 <Image
                   width={402}
                   height={600}
-                  src="images/d2.svg"
+                  src="/company/d2.svg"
                   alt="metrics images"
                 />
               </div>
@@ -42,7 +42,7 @@ const CompanyPage = () => {
                 <Image
                   width={402}
                   height={600}
-                  src="images/d3.svg"
+                  src="/company/d3.svg"
                   alt="metrics images"
                 />
               </div>
@@ -98,7 +98,7 @@ const CompanyPage = () => {
                 <Image
                   width={295}
                   height={400}
-                  src="/images/c1.svg"
+                  src="/company/c1.svg"
                   alt="culture @ klas"
                 />
               </div>
@@ -111,7 +111,7 @@ const CompanyPage = () => {
                 <Image
                   width={295}
                   height={400}
-                  src="/images/c2.svg"
+                  src="/company/c2.svg"
                   alt="culture @ klas"
                 />
               </div>
@@ -124,7 +124,7 @@ const CompanyPage = () => {
                 <Image
                   width={295}
                   height={400}
-                  src="/images/c3.svg"
+                  src="/company/c3.svg"
                   alt="culture @ klas"
                 />
               </div>
@@ -137,7 +137,7 @@ const CompanyPage = () => {
                 <Image
                   width={295}
                   height={400}
-                  src="/images/c4.svg"
+                  src="/company/c4.svg"
                   alt="culture @ klas"
                 />
               </div>
@@ -162,7 +162,7 @@ const CompanyPage = () => {
                 <Image
                   width={186}
                   height={41}
-                  src="/images/techcabal.svg"
+                  src="/company/techcabal.svg"
                   alt="TechCabal"
                   className="grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"
                 />
@@ -171,7 +171,7 @@ const CompanyPage = () => {
                 <Image
                   width={211}
                   height={30}
-                  src="/images/nairametrics.svg"
+                  src="/company/nairametrics.svg"
                   alt="NairaMetrics"
                   className="grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"
                 />
@@ -180,7 +180,7 @@ const CompanyPage = () => {
                 <Image
                   width={233}
                   height={72}
-                  src="/images/edtech.svg"
+                  src="/company/edtech.svg"
                   alt="EdTech Review"
                   className="grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"
                 />
@@ -189,7 +189,7 @@ const CompanyPage = () => {
                 <Image
                   width={145}
                   height={97}
-                  src="/images/disrupt.svg"
+                  src="/company/disrupt.svg"
                   alt="disrupt"
                   className="grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"
                 />
@@ -198,7 +198,7 @@ const CompanyPage = () => {
                 <Image
                   width={49}
                   height={56}
-                  src="/images/db.svg"
+                  src="/company/db.svg"
                   alt="DB"
                   className="grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"
                 />
