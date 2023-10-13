@@ -11,7 +11,7 @@ export function FAQ({
   faqs: { id: string; question: string; answer: string }[];
 }) {
   return (
-    <section className="container mb-[160px]">
+    <section className="container mt-20 mb-[160px]">
       <div>
         <div className="max-md:mb-[40px] mb-[100px]">
           <h2 className="text-5xl leading-[62px] max-md:text-[32px] max-md:leading-[42px] text-black text-center font-bold">
