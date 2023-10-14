@@ -2,16 +2,11 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import { siteConfig } from "@/config/site";
-import Footer from "@/components/footer";
-import Header from "@/components/header";
 
 const dm_sans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: {
-    default: "Free Online Teaching Platform | Klas.",
-    template: `%s - ${siteConfig.name}`,
-  },
+  title: "Free Online Teaching Platform | Klas.",
   description: siteConfig.description,
   keywords: [
     "Klas",
@@ -64,25 +59,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={dm_sans.className}>
-        <Header />
-        {children}
-        <Footer />
-      </body>
+      <body className={dm_sans.className}>{children}</body>
     </html>
   );
 }
-
-// <!--Start of Tawk.to Script-->
-// <script type="text/javascript">
-// var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-// (function(){
-// var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-// s1.async=true;
-// s1.src='https://embed.tawk.to/6528cc966fcfe87d54b95aa0/1hcjlubgk';
-// s1.charset='UTF-8';
-// s1.setAttribute('crossorigin','*');
-// s0.parentNode.insertBefore(s1,s0);
-// })();
-// </script>
-// <!--End of Tawk.to Script-->

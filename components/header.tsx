@@ -28,13 +28,13 @@ const Header = () => {
             <div className="flex max-md-800:hidden gap-[10px] transition-all duration-300 lg-1150:gap-8 items-center">
               <Link
                 className="text-sm lg-1150:text-base text-brand-blue-100 font-semibold"
-                href="/login"
+                href="/onboard"
               >
                 Login
               </Link>
               <Link
                 className="text-sm lg-1150:text-base font-medium text-white bg-brand-blue-200 py-4 px-8 rounded-[8px]"
-                href="/signup"
+                href="/onboard"
               >
                 Sign up free
               </Link>
@@ -82,13 +82,13 @@ const Header = () => {
             <div className=" flex mt-20 flex-col gap-[20px] transition-all duration-300 lg:gap-8 items-center">
               <Link
                 className="text-lg text-brand-blue-100 font-medium"
-                href="/login"
+                href="/onboard"
               >
                 Login
               </Link>
               <Link
                 className="text-lg font-medium text-white bg-brand-blue-200 py-4 px-[35px] rounded-[8px]"
-                href="/signup"
+                href="/onboard"
               >
                 Sign up free
               </Link>

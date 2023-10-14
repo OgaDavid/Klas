@@ -50,7 +50,7 @@ export default function TestimonialSection() {
         >
           {Testimonials.map(({ testimony, name, company, img }) => (
             <div key={name}>
-              <SwiperSlide>
+              <SwiperSlide className="testimonial-swiper-slide">
                 <div className="hover:cursor-grab">
                   <p className="text-center font-normal text-[rgba(0,0,0,.8)] mb-20 text-lg md:text-2xl leading-[28px]">
                     &quot;{testimony}&quot;

@@ -128,13 +128,21 @@
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
-.swiper {
+/* .swiper {
+  @apply max-w-[996px] h-[410px];
+} */
+
+.mySwiper {
   @apply max-w-[996px] h-[410px];
 }
 
-.swiper-slide {
+.testimonial-swiper-slide {
   @apply flex flex-col justify-center items-center rounded-[8px] py-[65px] max-md:px-[26px] md:p-[104px];
   background: rgba(17, 39, 227, 0.15);
+}
+
+.auth-swiper-slide {
+  @apply flex flex-col justify-center text-center items-center
 }
 
 .pricing-list li {
