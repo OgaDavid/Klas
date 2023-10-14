@@ -153,8 +153,18 @@
   list-style: decimal;
 }
 
+.btn-gradient {
+  background: linear-gradient(86.89deg,#1127e3,#7a46fd);
+}
+
 .box-shadow {
   box-shadow: 0 4px 20px rgba(0,0,0,.1);
+}
+
+.login-btn:hover {
+  color: white;
+  border: none;
+  background: linear-gradient(86.89deg,#1127e3,#7a46fd);
 }
 
 .box-shadow-two {
