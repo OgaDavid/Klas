@@ -18,10 +18,10 @@ const Header = () => {
         <header className="z-50">
           <div className="py-3 shadow-md px-7 md-800:px-10 bg-white rounded-[8px] border border-[#00000014] flex justify-between w-full items-center">
             <span>
-              <span>
+              <Link href="/">
                 <Icons.logo_main className="max-md-800:hidden" />
                 <Icons.logo_mobile className="md-800:hidden" />
-              </span>
+              </Link>
               <span className="sr-only">Klas</span>
             </span>
             <MainNav />
