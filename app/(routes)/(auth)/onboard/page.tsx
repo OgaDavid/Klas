@@ -4,8 +4,8 @@ import React from "react";
 
 export default function WelcomePage() {
   return (
-    <section className="md-920:h-screen px-6 md-920:grid md-920:place-items-center">
-      <div className="max-w-[550px] max-md-920:mt-[100px]">
+    <section className="h-screen px-6 grid place-items-center">
+      <div className="max-w-[550px]">
         <div className="mb-10">
           <h3 className="font-bold text-[32px] text-brand-blue-100">
             Get started with Klas

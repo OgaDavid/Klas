@@ -181,10 +181,22 @@
   -webkit-filter: drop-shadow(0 4px 25px rgba(0,0,0,.1))!important
 }
 
+.no-scrollbar::-webkit-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  --webkit-scrollbar: none;
+}
+
 
 @media screen and (max-width: 920px) {
   .grid_row_1 {
     grid-row: auto;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    --webkit-scrollbar: none;
   }
 }
 

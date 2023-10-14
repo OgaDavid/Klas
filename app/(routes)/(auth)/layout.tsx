@@ -19,7 +19,7 @@ export default function AuthLayout({
       <div className="w-2/4 max-md-920:hidden">
         <AuthCarousel />
       </div>
-      <div className="md-920:w-2/4">{children}</div>
+      <div className="md-920:w-2/4 overflow-y-scroll no-scrollbar md-920:h-screen">{children}</div>
     </div>
   );
 }
