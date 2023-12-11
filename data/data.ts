@@ -1,37 +1,37 @@
 export const CompaniesImages = [
   {
     name: "alida-school",
-    url: "images/alida-school.svg",
+    url: "images/landing-page/home-page/alida-school.svg",
     height: 60,
     width: 60,
   },
   {
     name: "univelcity",
-    url: "images/univelcity.svg",
+    url: "images/landing-page/home-page/univelcity.svg",
     height: 41,
     width: 196,
   },
   {
     name: "ai-school",
-    url: "images/ai-school.svg",
+    url: "images/landing-page/home-page/ai-school.svg",
     height: 44,
     width: 158,
   },
   {
     name: "mdena",
-    url: "images/mdena.svg",
+    url: "images/landing-page/home-page/mdena.svg",
     height: 39,
     width: 145,
   },
   {
     name: "design-pal",
-    url: "images/design-pal.svg",
+    url: "images/landing-page/home-page/design-pal.svg",
     height: 39,
     width: 124,
   },
   {
     name: "dev-careers",
-    url: "images/dev-careers.svg",
+    url: "images/landing-page/home-page/dev-careers.svg",
     height: 42,
     width: 132,
   },
@@ -40,21 +40,21 @@ export const CompaniesImages = [
 export const ExplainerData = [
   {
     id: 1,
-    image: "/images/explainer-1.png",
+    image: "/images/landing-page/home-page/explainer-1.png",
     title: "Live classes",
     description:
       "Our immersive class venue gives you the power to share your knowledge.",
   },
   {
     id: 2,
-    image: "/images/explainer-2.png",
+    image: "/images/landing-page/home-page/explainer-2.png",
     title: "Online Courses",
     description:
       "Run your knowledge business with online courses for your students.",
   },
   {
     id: 3,
-    image: "/images/explainer-3.png",
+    image: "/images/landing-page/home-page/explainer-3.png",
     title: "Ebook",
     description:
       "Reach your students in faster ways. Sell unlimited PDFs & files on Klas",
@@ -64,33 +64,33 @@ export const ExplainerData = [
 export const BeforeData = [
   {
     name: "Scheduling",
-    img: "/images/calendar.svg",
+    img: "/images/landing-page/home-page/calendar.svg",
     span: true,
   },
   {
     name: "Payments",
-    img: "/images/paypal.svg",
+    img: "/images/landing-page/home-page/paypal.svg",
     span: true,
   },
   {
     name: "Courses",
-    img: "/images/spread.svg",
+    img: "/images/landing-page/home-page/spread.svg",
     span: true,
     remove_Span: true,
   },
   {
     name: "Live classes",
-    img: "/images/zoom.svg",
+    img: "/images/landing-page/home-page/zoom.svg",
     span: true,
   },
   {
     name: "Ebooks",
-    img: "/images/selar.svg",
+    img: "/images/landing-page/home-page/selar.svg",
     span: true,
   },
   {
     name: "Community",
-    img: "/images/slack.svg",
+    img: "/images/landing-page/home-page/slack.svg",
   },
 ];
 
@@ -105,7 +105,7 @@ export const Features_Section_one = [
         "Host up to 100 learners per class",
       ],
     },
-    img: "/images/tools.png",
+    img: "/images/landing-page/home-page/tools.png",
     color: "#1127e3",
     reverse: true,
   },
@@ -119,7 +119,7 @@ export const Features_Section_one = [
         "Upload multiple lessons",
       ],
     },
-    img: "/images/video-player.png",
+    img: "/images/landing-page/home-page/video-player.png",
     color: "#1127e3",
   },
   {
@@ -132,7 +132,7 @@ export const Features_Section_one = [
         "Upload ebooks of any size in PDF format",
       ],
     },
-    img: "/images/pdf-reader.png",
+    img: "/images/landing-page/home-page/pdf-reader.png",
     color: "#1127e3",
     reverse: true,
   },
@@ -149,7 +149,7 @@ export const Features_Section_two = [
         "Unlimited transactions",
       ],
     },
-    img: "/images/payment.png",
+    img: "/images/landing-page/home-page/payment.png",
     color: "#fff",
     reverse: true,
   },
@@ -163,41 +163,41 @@ export const Features_Section_two = [
         "Control your academy operations",
       ],
     },
-    img: "/images/video-player.png",
+    img: "/images/landing-page/home-page/video-player.png",
     color: "#fff",
   },
 ];
 
 export const FeaturesData = [
   {
-    img: "/images/undraw_dashboard.png",
+    img: "/images/landing-page/home-page/undraw_dashboard.png",
     heading: "Student dashboards",
     paragraph:
       "A central learning hub for your students track upcoming classes, quizzes.",
   },
   {
-    img: "/images/undraw_online_test.png",
+    img: "/images/landing-page/home-page/undraw_online_test.png",
     heading: "Engaging quizzes",
     paragraph: "Create engaging quizzes for students, enjoy automated marking.",
   },
   {
-    img: "/images/undraw_video_files.png",
+    img: "/images/landing-page/home-page/undraw_video_files.png",
     heading: "Resources library ",
     paragraph:
       "Upload supplementary materials such as videos, docs, presentations.",
   },
   {
-    img: "/images/undraw_reminders.png",
+    img: "/images/landing-page/home-page/undraw_reminders.png",
     heading: "Class reminders",
     paragraph: "Send SMS/email reminders for your class via Klas Notify.",
   },
   {
-    img: "/images/undraw_booking.png",
+    img: "/images/landing-page/home-page/undraw_booking.png",
     heading: "Booking pages",
     paragraph: "Easily collect free or paid enrolments from students.",
   },
   {
-    img: "/images/undraw_analytics.png",
+    img: "/images/landing-page/home-page/undraw_analytics.png",
     heading: "Advanced analytics",
     paragraph: "Track your student attendance, learning progress, and more.",
   },
@@ -209,21 +209,21 @@ export const Testimonials = [
       "Klas is a brilliant platform for creators to share and monetize their expertise. The technology is fabulous and team is very professional. Delighted to be a partner.",
     name: "Haryy Stamper",
     company: "CEO, Holistic Academy",
-    img: "/images/person1.png",
+    img: "/images/landing-page/home-page/person1.png",
   },
   {
     testimony:
       "Working with Klas has been one of the spotlights of the year for Codenovation. The platform is easy to use, seamless, and has excellent customer service. Thanks for making it easy to teach online.",
     name: "Shola Akinrolie",
     company: "Founder, Codenovation",
-    img: "/images/person2.png",
+    img: "/images/landing-page/home-page/person2.png",
   },
   {
     testimony:
       "Great UI, easy to use, and straightforward. Excited to host more mandarin class on Klas.",
     name: "Margaret Anavhe",
     company: "Mandarin Speaker",
-    img: "/images/person3.png",
+    img: "/images/landing-page/home-page/person3.png",
   },
 ];
 

@@ -70,7 +70,7 @@ export default function HomePage() {
               <Image
                 className="w-full md-920:w-[400px] min-[1110px]:w-[640px] object-cover"
                 alt="hero-image"
-                src="/images/hero.png"
+                src="/images/landing-page/home-page/hero.png"
                 width={640}
                 height={563.95}
               />
@@ -167,7 +167,7 @@ export default function HomePage() {
                 width={90}
                 height={90}
                 className="mb-4"
-                src="images/klas-logo.svg"
+                src="images/landing-page/home-page/klas-logo.svg"
                 alt="logo"
               />
               <p className="text-lg">All you need is Klas</p>
