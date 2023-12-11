@@ -26,7 +26,7 @@ const CompanyPage = () => {
                 <Image
                   width={402}
                   height={600}
-                  src="/company/d1.svg"
+                  src="images/landing-page/company/d1.svg"
                   alt="metrics images"
                 />
               </div>
@@ -34,7 +34,7 @@ const CompanyPage = () => {
                 <Image
                   width={402}
                   height={600}
-                  src="/company/d2.svg"
+                  src="images/landing-page/company/d2.svg"
                   alt="metrics images"
                 />
               </div>
@@ -42,7 +42,7 @@ const CompanyPage = () => {
                 <Image
                   width={402}
                   height={600}
-                  src="/company/d3.svg"
+                  src="images/landing-page/company/d3.svg"
                   alt="metrics images"
                 />
               </div>
@@ -98,7 +98,7 @@ const CompanyPage = () => {
                 <Image
                   width={295}
                   height={400}
-                  src="/company/c1.svg"
+                  src="images/landing-page/company/c1.svg"
                   alt="culture @ klas"
                 />
               </div>
@@ -111,7 +111,7 @@ const CompanyPage = () => {
                 <Image
                   width={295}
                   height={400}
-                  src="/company/c2.svg"
+                  src="images/landing-page/company/c2.svg"
                   alt="culture @ klas"
                 />
               </div>
@@ -124,7 +124,7 @@ const CompanyPage = () => {
                 <Image
                   width={295}
                   height={400}
-                  src="/company/c3.svg"
+                  src="images/landing-page/company/c3.svg"
                   alt="culture @ klas"
                 />
               </div>
@@ -137,7 +137,7 @@ const CompanyPage = () => {
                 <Image
                   width={295}
                   height={400}
-                  src="/company/c4.svg"
+                  src="images/landing-page/company/c4.svg"
                   alt="culture @ klas"
                 />
               </div>
@@ -162,7 +162,7 @@ const CompanyPage = () => {
                 <Image
                   width={186}
                   height={41}
-                  src="/company/techcabal.svg"
+                  src="images/landing-page/company/techcabal.svg"
                   alt="TechCabal"
                   className="grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"
                 />
@@ -171,7 +171,7 @@ const CompanyPage = () => {
                 <Image
                   width={211}
                   height={30}
-                  src="/company/nairametrics.svg"
+                  src="images/landing-page/company/nairametrics.svg"
                   alt="NairaMetrics"
                   className="grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"
                 />
@@ -180,7 +180,7 @@ const CompanyPage = () => {
                 <Image
                   width={233}
                   height={72}
-                  src="/company/edtech.svg"
+                  src="images/landing-page/company/edtech.svg"
                   alt="EdTech Review"
                   className="grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"
                 />
@@ -189,7 +189,7 @@ const CompanyPage = () => {
                 <Image
                   width={145}
                   height={97}
-                  src="/company/disrupt.svg"
+                  src="images/landing-page/company/disrupt.svg"
                   alt="disrupt"
                   className="grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"
                 />
@@ -198,7 +198,7 @@ const CompanyPage = () => {
                 <Image
                   width={49}
                   height={56}
-                  src="/company/db.svg"
+                  src="images/landing-page/company/db.svg"
                   alt="DB"
                   className="grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"
                 />
