@@ -19,7 +19,7 @@ const CaseStudiesPage = () => {
             <Image
               width={143}
               height={43}
-              src="/images/landing-page/case-study/designpal-dark.svg"
+              src="/images/landing-page/case-study/design-pal.svg"
               alt="design pal - useCases"
             />
           </div>

@@ -9,19 +9,19 @@ import Image from "next/image";
 const slides = [
   {
     id: "slide 1",
-    img: "/auth/slide-1.svg",
+    img: "/images/auth-pages/slide-1.svg",
     title: "Deliver an unforgettable experience",
     paragraph: "Host all types and sizes of classes on Klas",
   },
   {
     id: "slide 2",
-    img: "/auth/slide-2.svg",
+    img: "/images/auth-pages/slide-2.svg",
     title: "Accept payments from students globally",
     paragraph: "You can monetize your classes with ease and manage payouts",
   },
   {
     id: "slide 3",
-    img: "/auth/slide-3.svg",
+    img: "/images/auth-pages/slide-3.svg",
     title: "Join the live learning revolution",
     paragraph: "The go-to live learning platform for creators around the world",
   },
