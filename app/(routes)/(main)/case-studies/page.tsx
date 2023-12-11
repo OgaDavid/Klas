@@ -19,7 +19,7 @@ const CaseStudiesPage = () => {
             <Image
               width={143}
               height={43}
-              src="/images/designpal-dark.svg"
+              src="/images/landing-page/case-study/designpal-dark.svg"
               alt="design pal - useCases"
             />
           </div>
@@ -27,16 +27,16 @@ const CaseStudiesPage = () => {
             <Image
               width={127}
               height={39}
-              src="/images/dev-career-dark.svg"
-              alt="design pal - useCases"
+              src="/images/landing-page/case-study/dev-career-dark.svg"
+              alt="dev career - useCases"
             />
           </div>
           <div className="w-[181px] max-[620px]:w-[150px] h-[150px] box-shadow-two grid place-items-center p-[10px] rounded-[12px]">
             <Image
               width={127}
               height={36}
-              src="/images/ai-school-dark.svg"
-              alt="design pal - useCases"
+              src="/images/landing-page/case-study/ai-school-dark.svg"
+              alt="ai school - useCases"
             />
           </div>
         </div>

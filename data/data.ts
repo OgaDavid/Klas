@@ -320,8 +320,8 @@ export const CaseStudiesData = [
     about:
       "DesignPal is an online design school with a goal to train over 100k designers globally using Klas.",
     category: "Online school",
-    imageSrc: "/case-study/design-pal-bg.jpg",
-    overlayImg: "/case-study/designpal.svg",
+    imageSrc: "/images/landing-page/case-study/design-pal-bg.jpg",
+    overlayImg: "/images/landing-page/case-study/designpal.svg",
   },
   {
     companyName: "AI School Africa",
@@ -329,8 +329,8 @@ export const CaseStudiesData = [
     about:
       "AI School is an online community that trains thousands of aspiring ML engineers in Africa using Klas.",
     category: "Community",
-    imageSrc: "/case-study/ai-school-bg.png",
-    overlayImg: "/case-study/ai-school-white.svg",
+    imageSrc: "/images/landing-page/case-study/ai-school-bg.png",
+    overlayImg: "/images/landing-page/case-study/ai-school-white.svg",
   },
   {
     companyName: "DevCareer",
@@ -338,8 +338,8 @@ export const CaseStudiesData = [
     about:
       "DevCareer is one of the biggest coding communities in Africa with over 10k active members. They use Klas for their virtual bootcamps & classes.",
     category: "Community",
-    imageSrc: "/case-study/devcareers-bg.png",
-    overlayImg: "/case-study/dev-career.svg",
+    imageSrc: "/images/landing-page/case-study/devcareers-bg.png",
+    overlayImg: "/images/landing-page/case-study/dev-career.svg",
   },
   {
     companyName: "TDev",
@@ -347,8 +347,8 @@ export const CaseStudiesData = [
     about:
       "TDev is one of the biggest coding communities in Togo. They use Klas to host virtual bootcamps & classes for their thousands of students.",
     category: "Community",
-    imageSrc: "/case-study/t-dev-bg.png",
-    overlayImg: "/case-study/t-dev.svg",
+    imageSrc: "/images/landing-page/case-study/t-dev-bg.png",
+    overlayImg: "/images/landing-page/case-study/t-dev.svg",
   },
   {
     companyName: "No Code Academy",
@@ -356,8 +356,8 @@ export const CaseStudiesData = [
     about:
       "No Code Academy is an online school that trains entrepreneurs to build functional products using no code tools. They use Klas to host virtual bootcamps & classes for students.",
     category: "Online school",
-    imageSrc: "/case-study/no-code-bg.png",
-    overlayImg: "/case-study/no-code.svg",
+    imageSrc: "/images/landing-page/case-study/no-code-bg.png",
+    overlayImg: "/images/landing-page/case-study/no-code.svg",
   },
   {
     companyName: "GenZtechies",
@@ -365,7 +365,7 @@ export const CaseStudiesData = [
     about:
       "GenZtechies is the biggest tech community in Africa for Gen Z. They use Klas to host virtual bootcamps, classes, & workshops for their members.",
     category: "Community",
-    imageSrc: "/case-study/genz-bg.jpg",
-    overlayImg: "/case-study/genz.svg",
+    imageSrc: "/images/landing-page/case-study/genz-bg.jpg",
+    overlayImg: "/images/landing-page/case-study/genz.svg",
   },
 ];
