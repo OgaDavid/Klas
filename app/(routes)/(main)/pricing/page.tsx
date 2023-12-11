@@ -88,7 +88,7 @@ const PricingPage = () => {
                   <Image
                     width={24}
                     height={24}
-                    src="/images/pro.svg"
+                    src="/images/landing-page/home-page/pro.svg"
                     alt="pro"
                   />
                   Pro
