@@ -17,6 +17,10 @@ import {
 import { Input } from "@/components/ui/input";
 import { useForm } from "react-hook-form";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { signIn } from "next-auth/react"
+import { toast } from "sonner";
+import { Loader2 } from "lucide-react";
 
 const LoginFormSchema = z.object({
   email: z.string().email({
@@ -27,12 +31,6 @@ const LoginFormSchema = z.object({
   }),
 });
 
-function onSubmit(values: z.infer<typeof LoginFormSchema>) {
-  // Do something with the form values.
-  // ✅ This will be type-safe and validated.
-  console.log(values);
-}
-
 export default function LoginForm() {
   const LoginForm = useForm<z.infer<typeof LoginFormSchema>>({
     resolver: zodResolver(LoginFormSchema),
@@ -41,6 +39,43 @@ export default function LoginForm() {
       password: "",
     },
   });
+
+  const [loading, setLoading] = React.useState(false);
+
+  const router = useRouter();
+
+  const onSubmit = async (userLoginData: z.infer<typeof LoginFormSchema>) => {
+
+    try {
+      setLoading(true);
+
+      const res = await signIn('credentials', {
+        email: userLoginData.email,
+        password: userLoginData.password,
+        redirect: false
+      })
+
+      console.log(res);
+
+      if (res?.error) {
+        toast.error(res.error + ' 🤒');
+        LoginForm.reset();
+      }
+
+     if (res?.ok && res?.status === 200) {
+        toast.success("User Signed in Successfully 🎊")
+
+        router.push("/dashboard");
+      }
+
+    } catch (error: any) {
+      toast.error(error.message);
+    }
+    finally {
+      setLoading(false);
+    }
+
+  }
   return (
     <Form {...LoginForm}>
       <form onSubmit={LoginForm.handleSubmit(onSubmit)} className="space-y-8">
@@ -54,7 +89,7 @@ export default function LoginForm() {
                 <span className="text-[#ff6868]"> *</span>
               </FormLabel>
               <FormControl>
-                <Input placeholder="Enter your email address" {...field} />
+                <Input disabled={loading} placeholder="Enter your email address" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -70,7 +105,7 @@ export default function LoginForm() {
                 <span className="text-[#ff6868]"> *</span>
               </FormLabel>
               <FormControl>
-                <Input placeholder="Enter your password" {...field} />
+                <Input disabled={loading} placeholder="Enter your password" {...field} />
               </FormControl>
               <FormDescription className="text-sm opacity-0 text-muted-foreground">
                 Password: At least 8 characters, alphanumeric, upper & lower
@@ -89,10 +124,12 @@ export default function LoginForm() {
         </div>
         <div className="mt-[45px] flex items-center justify-center gap-10 flex-col">
           <Button
-            className="px-8 w-[300px] h-[50px] flex items-center justify-center rounded-[8px] font-bold py-4 text-white btn-gradient"
+            disabled={loading}
+            className="px-8 w-[300px] gap-2 h-[50px] flex items-center justify-center rounded-[8px] font-bold py-4 text-white btn-gradient"
             type="submit"
           >
             Continue
+            {loading && <Loader2 width={14} height={14} className="animate-spin text-white" />}
           </Button>
           <small className="text-sm text-[rgba(0,0,0,.5)]">
             Don&apos;t have an account?{" "}

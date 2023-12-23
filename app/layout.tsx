@@ -2,6 +2,9 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import { siteConfig } from "@/config/site";
+import AuthProvider from "@/providers/auth-provider";
+
+import { Toaster } from "sonner";
 
 const dm_sans = DM_Sans({ subsets: ["latin"] });
 
@@ -59,7 +62,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={dm_sans.className}>{children}</body>
+      <AuthProvider>
+        <body className={dm_sans.className}>
+          {children}
+          <Toaster richColors position="top-right" />
+        </body>
+      </AuthProvider>
     </html>
   );
 }
