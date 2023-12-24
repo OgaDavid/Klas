@@ -1,8 +1,12 @@
-import type { NextAuthOptions } from "next-auth";
-import { PrismaAdapter } from "@auth/prisma-adapter";
+import type { NextAuthOptions, User as NextAuthUser } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
+import { PrismaAdapter } from "@auth/prisma-adapter";
 import prismadb from "@/lib/prismadb";
 import bcrypt from 'bcrypt';
+
+interface User extends NextAuthUser {
+  phoneNumber: string;
+}
 
 
 export const authOptions: NextAuthOptions = {
@@ -62,6 +66,37 @@ export const authOptions: NextAuthOptions = {
       },
     }),
   ],
+  callbacks: {
+    async jwt({ token, user, session }) {
+
+      // pass in user id and phone number to jwt token
+
+      if (user) {
+        const { id, phoneNumber } = user as User
+        return {
+          ...token,
+          id,
+          phoneNumber
+        }
+      }
+
+      return token
+    },
+
+    async session({ session, user, token }) {
+
+      // pass in user id and phone number to session
+
+      return {
+        ...session,
+        user: {
+          ...session.user,
+          id: token.id,
+          phoneNumber: token.phoneNumber
+        }
+      }
+    }
+  },
   pages: {
     signIn: "/login",
   },

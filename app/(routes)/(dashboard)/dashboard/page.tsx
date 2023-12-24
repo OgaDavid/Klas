@@ -1,21 +1,23 @@
-"use client"
+import React from "react";
+import { Metadata } from "next";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/api/auth/[...nextauth]/options";
+import SignOutButton from "@/components/auth/signout";
 
-import React from 'react'
-import { signOut, useSession } from 'next-auth/react'
+export const metadata: Metadata = {
+  title: "Home",
+};
 
-const DashboardPage = () => {
+const DashboardHome = async () => {
+  const session = await getServerSession(authOptions);
 
-  const { data: session, status } = useSession();
-  console.log(session)
-  return (
-    <div>DashboardPage
-        <button onClick={() => signOut({
-            callbackUrl: "http://localhost:3000/login"
-        })}>Sign Out</button>
+  // console.log(session);
 
-        <h1>HI {session?.user?.name}</h1>
-    </div>
-  )
-}
+  return <div>
+    <h1>Dashboard</h1>
+    <p>Hello { session?.user?.name }</p>
+    <SignOutButton />
+  </div>;
+};
 
-export default DashboardPage
+export default DashboardHome;

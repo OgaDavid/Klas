@@ -23,7 +23,7 @@ import { Loader2 } from "lucide-react";
 import { toast } from "sonner";
 
 const RegisterFormSchema = z.object({
-  fullName: z.string().min(2, {
+  name: z.string().min(2, {
     message: "Full name must be at least 3 characters.",
   }),
   email: z.string().email({
@@ -53,7 +53,7 @@ export default function RegisterForm() {
   const RegisterForm = useForm<z.infer<typeof RegisterFormSchema>>({
     resolver: zodResolver(RegisterFormSchema),
     defaultValues: {
-      fullName: "",
+      name: "",
       email: "",
       phoneNumber: "",
       password: "",
@@ -91,12 +91,12 @@ export default function RegisterForm() {
       >
         <FormField
           control={RegisterForm.control}
-          name="fullName"
+          name="name"
           render={({ field }) => (
             <FormItem>
               <FormLabel
                 className={`mb-5 text-lg font-medium ${
-                  RegisterForm.formState.errors.fullName && "text-black"
+                  RegisterForm.formState.errors.name && "text-black"
                 }`}
               >
                 Full Name
@@ -106,7 +106,7 @@ export default function RegisterForm() {
                 <Input
                   disabled={loading}
                   className={`${
-                    RegisterForm.formState.errors.fullName &&
+                    RegisterForm.formState.errors.name &&
                     "border-destructive"
                   }`}
                   placeholder="Enter your full name"

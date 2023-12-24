@@ -6,9 +6,9 @@ export async function POST(req: Request) {
     try {
         const userData = await req.json();
 
-        const {fullName, email, password, phoneNumber} = await userData;
+        const {name, email, password, phoneNumber} = await userData;
 
-        if(!fullName || !email || !password || !phoneNumber) {
+        if(!name || !email || !password || !phoneNumber) {
             return new NextResponse("Missing full name, email, password or phone number", { status: 400 })
         }
 
@@ -26,7 +26,7 @@ export async function POST(req: Request) {
 
         const newUser = await prismadb.user.create({
             data: {
-                fullName,
+                name,
                 email,
                 hashedPassword,
                 phoneNumber
