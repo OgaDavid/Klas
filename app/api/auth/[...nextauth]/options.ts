@@ -95,7 +95,7 @@ export const authOptions: NextAuthOptions = {
           phoneNumber: token.phoneNumber
         }
       }
-    }
+    },
   },
   pages: {
     signIn: "/login",

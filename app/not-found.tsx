@@ -5,12 +5,12 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Klas: Page  Not Found",
+  title: "Klas: Page Not Found",
 };
 
 export default function NotFound() {
   return (
-    <div className="flex items-center justify-center flex-col p-10">
+    <div className="flex items-center justify-center max-md:mt-20 flex-col p-10">
       <Image
         className="max-w-[700px] w-full"
         src="/images/404.png"
