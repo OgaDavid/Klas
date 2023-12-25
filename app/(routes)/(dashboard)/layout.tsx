@@ -4,7 +4,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: {
     default: "Klas: Dashboard",
-    template: "Klas: Dashboard %s",
+    template: "Klas: %s",
   },
 };
 

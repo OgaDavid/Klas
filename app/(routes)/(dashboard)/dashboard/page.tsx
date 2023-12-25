@@ -5,7 +5,7 @@ import { authOptions } from "@/app/api/auth/[...nextauth]/options";
 import SignOutButton from "@/components/auth/signout";
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: "Dashboard Home",
 };
 
 const DashboardHome = async () => {
