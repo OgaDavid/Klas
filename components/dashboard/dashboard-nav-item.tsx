@@ -24,11 +24,11 @@ const DashboardNavItem = ({
           href={item.href}
           className={`${
             pathname === item.href && "group is-active bg-white/50"
-          } w-[50px] flex items-center justify-center rounded-full h-[50px] bg-white`}
+          } lg:w-[50px] lg:h-[50px] w-10 h-10 flex items-center justify-center rounded-full bg-white`}
         >
           {item.icon}
         </Link>
-        {item.name}
+        <p className="max-md-920:text-xs">{item.name}</p>
         <Icons.dashboard_active_arrow
           className={`${pathname === item.href ? "" : "opacity-0"} pt-2`}
         />
