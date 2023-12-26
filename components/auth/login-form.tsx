@@ -128,8 +128,7 @@ export default function LoginForm() {
             className="px-8 w-[300px] gap-2 h-[50px] flex items-center justify-center rounded-[8px] font-bold py-4 text-white btn-gradient"
             type="submit"
           >
-            Continue
-            {loading && <Loader2 width={14} height={14} className="animate-spin text-white" />}
+            {loading ? <Loader2 width={16} height={16} className="animate-spin text-white" /> : "Continue"}
           </Button>
           <small className="text-sm text-[rgba(0,0,0,.5)]">
             Don&apos;t have an account?{" "}

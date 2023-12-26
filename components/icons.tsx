@@ -122,6 +122,127 @@ export const Icons = {
       </defs>
     </svg>
   ),
+  logo_dashboard: (props: IconProps) => (
+    <svg
+      {...props}
+      width="123"
+      height="52"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M59.315 38V14.965h4.212v9.313l8.523-9.313h5.2l-8.49 9.148L77.48 38h-5.167l-6.581-10.662-2.205 2.402V38h-4.212Zm20.95 0V14.307h4.212V38h-4.212Zm14.143.395c-1.404 0-2.556-.22-3.455-.658-.9-.46-1.569-1.064-2.008-1.81a4.779 4.779 0 0 1-.658-2.468c0-1.514.592-2.742 1.777-3.686 1.185-.943 2.962-1.415 5.331-1.415h4.146v-.395c0-1.118-.318-1.941-.954-2.468-.636-.526-1.426-.79-2.37-.79-.855 0-1.6.21-2.237.626-.636.395-1.031.987-1.185 1.777h-4.113c.11-1.185.505-2.216 1.185-3.093.702-.878 1.601-1.547 2.698-2.008 1.097-.482 2.325-.724 3.686-.724 2.325 0 4.157.582 5.495 1.744 1.338 1.163 2.007 2.809 2.007 4.936V38h-3.587l-.394-2.633a6.036 6.036 0 0 1-2.04 2.172c-.856.57-1.964.856-3.324.856Zm.954-3.29c1.207 0 2.139-.396 2.797-1.185.68-.79 1.108-1.766 1.283-2.93h-3.586c-1.12 0-1.92.21-2.402.626-.483.395-.724.889-.724 1.48 0 .637.24 1.13.724 1.482.482.35 1.118.526 1.908.526Zm19.157 3.29c-1.448 0-2.721-.23-3.818-.691-1.096-.483-1.974-1.14-2.632-1.974-.658-.834-1.053-1.8-1.185-2.896h4.245c.132.636.483 1.184 1.053 1.645.593.439 1.349.658 2.271.658.921 0 1.59-.186 2.007-.56.439-.372.658-.8.658-1.283 0-.702-.307-1.173-.921-1.415-.614-.263-1.47-.515-2.567-.757a28.008 28.008 0 0 1-2.139-.559 10.979 10.979 0 0 1-2.007-.822 4.656 4.656 0 0 1-1.448-1.317c-.373-.548-.559-1.217-.559-2.007 0-1.448.57-2.666 1.711-3.653 1.162-.987 2.786-1.48 4.87-1.48 1.93 0 3.466.45 4.607 1.349 1.162.9 1.854 2.139 2.073 3.718h-3.982c-.241-1.206-1.152-1.81-2.731-1.81-.79 0-1.404.154-1.843.46-.417.308-.625.692-.625 1.153 0 .482.318.866.954 1.151.636.286 1.481.549 2.534.79 1.141.263 2.183.56 3.126.889.965.307 1.733.778 2.304 1.415.57.614.855 1.502.855 2.665a4.579 4.579 0 0 1-.79 2.731c-.548.812-1.338 1.448-2.369 1.909-1.031.46-2.248.69-3.652.69Z"
+        fill="url(#klas-logo_svg__a)"
+      ></path>
+      <g filter="url(#klas-logo_svg__b)">
+        <ellipse
+          cx="24.28"
+          cy="29.681"
+          rx="22.28"
+          ry="19.58"
+          fill="#fff"
+        ></ellipse>
+      </g>
+      <g filter="url(#klas-logo_svg__c)">
+        <ellipse
+          cx="24.28"
+          cy="23.605"
+          rx="22.28"
+          ry="21.605"
+          fill="#6C6C6C"
+        ></ellipse>
+      </g>
+      <ellipse
+        cx="24.28"
+        cy="22.93"
+        rx="22.28"
+        ry="20.93"
+        fill="#F7F7F7"
+      ></ellipse>
+      <ellipse
+        cx="24.28"
+        cy="22.253"
+        rx="18.23"
+        ry="17.554"
+        fill="url(#klas-logo_svg__d)"
+      ></ellipse>
+      <circle cx="16.854" cy="22.254" r="4.051" fill="#fff"></circle>
+      <circle cx="31.708" cy="22.254" r="4.051" fill="#fff"></circle>
+      <defs>
+        <linearGradient
+          id="klas-logo_svg__a"
+          x1="90"
+          y1="5"
+          x2="90"
+          y2="48"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#0473E8"></stop>
+          <stop offset="1" stop-color="#7A46FD"></stop>
+        </linearGradient>
+        <linearGradient
+          id="klas-logo_svg__d"
+          x1="24.28"
+          y1="4.699"
+          x2="24.28"
+          y2="39.808"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#0374E8"></stop>
+          <stop offset="1" stop-color="#7A46FD"></stop>
+        </linearGradient>
+        <filter
+          id="klas-logo_svg__b"
+          x="0.95"
+          y="10.102"
+          width="46.661"
+          height="41.261"
+          filterUnits="userSpaceOnUse"
+          color-interpolation-filters="sRGB"
+        >
+          <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+          <feColorMatrix
+            in="SourceAlpha"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+            result="hardAlpha"
+          ></feColorMatrix>
+          <feOffset dy="1.05"></feOffset>
+          <feGaussianBlur stdDeviation="0.525"></feGaussianBlur>
+          <feComposite in2="hardAlpha" operator="out"></feComposite>
+          <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix>
+          <feBlend
+            in2="BackgroundImageFix"
+            result="effect1_dropShadow_12206_6178"
+          ></feBlend>
+          <feBlend
+            in="SourceGraphic"
+            in2="effect1_dropShadow_12206_6178"
+            result="shape"
+          ></feBlend>
+        </filter>
+        <filter
+          id="klas-logo_svg__c"
+          x="0.65"
+          y="0.65"
+          width="47.262"
+          height="45.912"
+          filterUnits="userSpaceOnUse"
+          color-interpolation-filters="sRGB"
+        >
+          <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+          <feBlend
+            in="SourceGraphic"
+            in2="BackgroundImageFix"
+            result="shape"
+          ></feBlend>
+          <feGaussianBlur
+            stdDeviation="0.675"
+            result="effect1_foregroundBlur_12206_6178"
+          ></feGaussianBlur>
+        </filter>
+      </defs>
+    </svg>
+  ),
   logo_mobile: (props: IconProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -479,6 +600,20 @@ export const Icons = {
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
+      ></path>
+    </svg>
+  ),
+  back_icon: (props: IconProps) => (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      fill="none"
+    >
+      <path
+        fill="#1127E3"
+        d="M13.83 19.001a1 1 0 0 1-.78-.37l-4.83-6a1 1 0 0 1 0-1.27l5-6a1.001 1.001 0 1 1 1.54 1.28l-4.47 5.36 4.32 5.36a1 1 0 0 1-.78 1.64Z"
       ></path>
     </svg>
   ),

@@ -19,7 +19,7 @@ export async function POST(req: Request) {
         })
 
         if ( userExists ) {
-            return new NextResponse("This user already exists", { status: 400 });
+            return new NextResponse("Email already in use. Please log in or reset password if forgotten.", { status: 400 });
         }
 
         const hashedPassword = await bcrypt.hash(password, 10);

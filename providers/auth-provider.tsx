@@ -8,7 +8,7 @@ export default function AuthProvider ({ children, session }: {
 }) {
     return (
         <SessionProvider session={session}>
-            { children   }
+            { children }
         </SessionProvider>
     )
 }

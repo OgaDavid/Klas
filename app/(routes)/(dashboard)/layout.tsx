@@ -1,5 +1,7 @@
 import React from "react";
 import { Metadata } from "next";
+import DashboardHeader from "@/components/dashboard/dashboard-header";
+import getSession from "@/actions/get-user-session";
 
 export const metadata: Metadata = {
   title: {
@@ -8,14 +10,19 @@ export const metadata: Metadata = {
   },
 };
 
-export default function DashboardLayout({
+export default async function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+
+  const session = await getSession();
+  
   return (
-    <div className="">
-      <div className="">{children}</div>
+    <div className="px-10 py-10">
+      <div className="">
+        <DashboardHeader session={session}/>
+        {children}</div>
     </div>
   );
 }
