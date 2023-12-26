@@ -31,7 +31,7 @@ const contentOptions = [
 
 const DashboardCreatePage = () => {
   return (
-    <section className="max-md:px-5">
+    <section className="max-md:px-10">
       <div className="flex flex-col gap-2 md:gap-4 items-center">
         <h3 className="font-bold text-[28px] text-center">
           What kind of content is it?
