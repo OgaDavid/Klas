@@ -13,11 +13,13 @@ const DashboardHome = async () => {
 
   // console.log(session);
 
-  return <div>
-    <h1>Dashboard</h1>
-    <p>Hello { session?.user?.name }</p>
-    <SignOutButton />
-  </div>;
+  return (
+    <div className="">
+      <h1>Dashboard</h1>
+      <p>Hello {session?.user?.name}</p>
+      <SignOutButton />
+    </div>
+  );
 };
 
 export default DashboardHome;

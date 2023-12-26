@@ -40,12 +40,12 @@ const DashboardHeader = ({
           </div>
         </div>
       ) : (
-        <div>
-          <Link className="flex items-center gap-[10px] font-bold text-xl text-brand-blue-200" href="/dashboard">
+        <div className="mx-5">
+          <Link className="flex max-md:mt-4 items-center md:gap-[10px] font-bold text-xl text-brand-blue-200" href="/dashboard">
             <Icons.back_icon />
             Back
           </Link>
-          <div className="mt-[30px] mb-10 border border-gray-50"/>
+          <div className="mt-[30px] mb-4 md:mb-10 border border-gray-50"/>
         </div>
       )}
     </div>

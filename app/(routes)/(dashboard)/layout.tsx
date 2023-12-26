@@ -15,14 +15,14 @@ export default async function DashboardLayout({
 }: {
   children: React.ReactNode;
 }) {
-
   const session = await getSession();
-  
+
   return (
-    <div className="px-10 py-10">
+    <div className="md:px-10 md:py-10">
       <div className="">
-        <DashboardHeader session={session}/>
-        {children}</div>
+        <DashboardHeader session={session} />
+        {children}
+      </div>
     </div>
   );
 }
