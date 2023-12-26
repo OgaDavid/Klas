@@ -23,7 +23,7 @@ const DashboardHeader = ({
   const createContent = pathname.match("/dashboard/create");
 
   return (
-    <div className="">
+    <div className="max-md:hidden">
       {!createContent ? (
         <div className="md:px-10 md:pt-10">
           <div className="flex mb-10 items-center justify-between">

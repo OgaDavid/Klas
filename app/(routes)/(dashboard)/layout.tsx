@@ -65,20 +65,20 @@ export default async function DashboardLayout({
   const session = await getSession();
 
   return (
-    <div className="">
-      <div className="">
+    <div>
+      <div>
         <DashboardHeader session={session} />
-        <div className="px-6 md:mx-10 pt-8 rounded-2xl flex flex-col dashboard-packages-bg items-center text-white justify-center">
-          <h2 className="font-medium text-4xl">What will you teach today?</h2>
-          <div className="mx-auto mt-[30px] mb-10 flex items-center justify-center gap-2">
-            <div className="w-[800px]">
+        <div className="px-6 md:mx-10 md:pt-8 md:rounded-2xl flex flex-col dashboard-packages-bg items-center text-white justify-center">
+          <h2 className="font-medium max-md:hidden text-4xl">What will you teach today?</h2>
+          <div className="mx-auto w-full mt-[30px] mb-10 flex items-center justify-center gap-5">
+            <div className="w-full md-920:w-[800px]">
               <div className="flex items-center justify-center">
-                <span className="bg-white rounded-l-[8px] py-[16px] px-[3px]">
+                <span className="bg-white rounded-l-[8px] py-[14px] px-[3px]">
                   <Icons.dashboard_input_search className="text-[#00000026] flex items-center mt-[1px] mr-[2px] ml-[15px]" />
                 </span>
                 <input
                   placeholder="Search for your content"
-                  className="py-[12px] border-none outline-none place rounded-l-none rounded-r-[8px] px-[3px] placeholder:text-[rgba(0,0,0,.25)] w-full text-[rgba(0,0,0,.25)]"
+                  className="py-[10px] border-none outline-none place rounded-l-none rounded-r-[8px] px-[3px] placeholder:text-[rgba(0,0,0,.25)] w-full text-[rgba(0,0,0,.25)]"
                 />
               </div>
             </div>
