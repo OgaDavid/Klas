@@ -157,6 +157,11 @@
   background: linear-gradient(86.89deg,#1127e3,#7a46fd);
 }
 
+.outline-button:hover {
+  background: linear-gradient(86.89deg,#1127e3,#7a46fd);
+  color: white;
+}
+
 .box-shadow {
   box-shadow: 0 4px 20px rgba(0,0,0,.1);
 }

@@ -617,4 +617,70 @@ export const Icons = {
       ></path>
     </svg>
   ),
+  recorded_courses: (props: IconProps) => (
+    <svg
+      {...props}
+      width="80"
+      height="81"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="styles_cardIcon__vvf_D"
+    >
+      <circle cx="40" cy="40.141" r="40" fill="#1127E3"></circle>
+      <path fill="url(#cohort_svg__a)" d="M24 24h32v32H24z"></path>
+      <defs>
+        <pattern
+          id="cohort_svg__a"
+          patternContentUnits="objectBoundingBox"
+          width="1"
+          height="1"
+        ></pattern>
+        <image id="cohort_svg__b" width="512" height="512"></image>
+      </defs>
+    </svg>
+  ),
+  ebooks: (props: IconProps) => (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="80"
+      height="81"
+      fill="none"
+      className="styles_cardIcon__vvf_D"
+    >
+      <circle cx="40" cy="40.141" r="40" fill="#1127E3"></circle>
+      <path fill="url(#bootcamp_svg__a)" d="M24 24h32v32H24z"></path>
+      <defs>
+        <pattern
+          id="bootcamp_svg__a"
+          width="1"
+          height="1"
+          patternContentUnits="objectBoundingBox"
+        ></pattern>
+        <image id="bootcamp_svg__b" width="512" height="512"></image>
+      </defs>
+    </svg>
+  ),
+  live_classes: (props: IconProps) => (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="80"
+      height="81"
+      fill="none"
+      className="styles_cardIcon__vvf_D"
+    >
+      <circle cx="40" cy="40.141" r="40" fill="#1127E3"></circle>
+      <path fill="url(#onetime_svg__a)" d="M24 24h32v32H24z"></path>
+      <defs>
+        <pattern
+          id="onetime_svg__a"
+          width="1"
+          height="1"
+          patternContentUnits="objectBoundingBox"
+        ></pattern>
+        <image id="onetime_svg__b" width="512" height="512"></image>
+      </defs>
+    </svg>
+  ),
 };
