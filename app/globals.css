@@ -172,6 +172,10 @@
   background: linear-gradient(86.89deg,#1127e3,#7a46fd);
 }
 
+.dashboard-packages-bg {
+  background: linear-gradient(250deg,#1127e3,#7a46fd);
+}
+
 .box-shadow-two {
   box-shadow: 0 4px 20px rgba(0,0,0,.08);
 }

@@ -617,4 +617,103 @@ export const Icons = {
       ></path>
     </svg>
   ),
+  dashboard_home: (props: IconProps) => (
+    <svg
+      {...props}
+      width="21"
+      height="20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="m19.743 10.332-9-10c-.38-.422-1.107-.422-1.486 0l-9 10A1 1 0 0 0 1 12.002h2v7a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-7h2a.999.999 0 0 0 .743-1.67ZM10 14.002a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z"
+        fill="currentColor"
+      ></path>
+    </svg>
+  ),
+  dashboard_content: (props: IconProps) => (
+    <svg
+      {...props}
+      width="16"
+      height="20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M14 20a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H8v7L5.5 5.5 3 7V0H2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12Z"
+        fill="currentColor"
+      ></path>
+    </svg>
+  ),
+  dashboard_recordings: (props: IconProps) => (
+    <svg
+      {...props}
+      width="22"
+      height="22"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M11 .5C5.225.5.5 5.225.5 11S5.225 21.5 11 21.5 21.5 16.775 21.5 11 16.775.5 11 .5Zm0 15A4.513 4.513 0 0 1 6.5 11c0-2.475 2.025-4.5 4.5-4.5s4.5 2.025 4.5 4.5-2.025 4.5-4.5 4.5Z"
+        fill="currentColor"
+      ></path>
+    </svg>
+  ),
+  dashboard_resources: (props: IconProps) => (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="25"
+      fill="none"
+    >
+      <path
+        fill="currentColor"
+        d="M5.26 11.281h13.48l-.67 9H5.93l-.67-9Zm3.74-7h5.97L19 7.661l1.59-1.59L22 7.491l-2.79 2.79H4.79L2 7.491l1.41-1.41L5 7.661l4-3.38Z"
+      ></path>
+    </svg>
+  ),
+  dashboard_settings: (props: IconProps) => (
+    <svg
+      {...props}
+      width="16"
+      height="16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M8 0a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2H0v-2c0-2.21 3.58-4 8-4Z"
+        fill="currentColor"
+      ></path>
+    </svg>
+  ),
+  dashboard_active_arrow: (props: IconProps) => (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="35"
+      height="23"
+      fill="none"
+    >
+      <path
+        fill="#FFFFFF"
+        d="M15.212 1.698a3 3 0 0 1 4.576 0L33.662 18.06c1.653 1.949.268 4.94-2.288 4.94H3.626c-2.556 0-3.941-2.991-2.288-4.94L15.212 1.698Z"
+      ></path>
+    </svg>
+  ),
+  dashboard_input_search: (props: IconProps) => (
+    <svg
+      {...props}
+      width="15"
+      height="15"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="m14 13.999-2.99-2.996L14 13.999Zm-1.333-7a5.667 5.667 0 1 1-11.333 0 5.667 5.667 0 0 1 11.333 0Z"
+        stroke="currentColor"
+        stroke-linecap="round"
+      ></path>
+    </svg>
+  ),
 };

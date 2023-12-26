@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import { Icons } from "@/components/icons";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: {
@@ -16,16 +17,19 @@ const contentOptions = [
     title: "Recorded courses",
     description: "Upload and sell your courses",
     icon: "/images/dashboard/recorded-courses.png",
+    link: "/dashboard/create/lesson",
   },
   {
     title: "Ebooks",
     description: "Sell interactive ebooks",
     icon: "/images/dashboard/ebooks.png",
+    link: "/dashboard/create/ebook",
   },
   {
     title: "Live classes",
     description: "Host immersive & fun classes",
     icon: "/images/dashboard/live-classes.png",
+    link: "/dashboard/create/live",
   },
 ];
 
@@ -48,7 +52,13 @@ const DashboardCreatePage = () => {
           >
             <div className="mb-6">
               <div className="p-6 rounded-full bg-brand-blue-100">
-                <Image className="" src={content.icon} alt="icon" width={30} height={30} />
+                <Image
+                  className=""
+                  src={content.icon}
+                  alt="icon"
+                  width={30}
+                  height={30}
+                />
               </div>
             </div>
             <h4 className="font-medium text-xl text-center mb-2">
@@ -57,9 +67,11 @@ const DashboardCreatePage = () => {
             <p className="text-center mb-10 text-[rgba(0,0,0,.5)]">
               {content.description}
             </p>
-            <Button className="py-6 font-semibold outline-button rounded-[8px] border bg-white text-brand-blue-100 border-brand-blue-100 px-7 text-sm w-[150px]">
-              Start
-            </Button>
+            <Link href={content.link}>
+              <Button className="py-6 font-semibold outline-button rounded-[8px] border bg-white text-brand-blue-100 border-brand-blue-100 px-7 text-sm w-[150px]">
+                Start
+              </Button>
+            </Link>
           </div>
         ))}
       </div>

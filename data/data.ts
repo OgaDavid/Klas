@@ -1,3 +1,5 @@
+import { Icons } from "@/components/icons";
+
 export const CompaniesImages = [
   {
     name: "alida-school",

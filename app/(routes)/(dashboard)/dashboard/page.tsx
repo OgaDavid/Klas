@@ -11,13 +11,9 @@ export const metadata: Metadata = {
 const DashboardHome = async () => {
   const session = await getServerSession(authOptions);
 
-  // console.log(session);
-
   return (
-    <div className="">
-      <h1>Dashboard</h1>
-      <p>Hello {session?.user?.name}</p>
-      <SignOutButton />
+    <div className="md:px-10">
+      {/*<SignOutButton /> */}
     </div>
   );
 };

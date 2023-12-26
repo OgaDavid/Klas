@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import { Icons } from "../icons";
 import { Button } from "@/components/ui/button";
@@ -22,9 +23,9 @@ const DashboardHeader = ({
   const createContent = pathname.match("/dashboard/create");
 
   return (
-    <div>
+    <div className="">
       {!createContent ? (
-        <div>
+        <div className="md:px-10 md:pt-10">
           <div className="flex mb-10 items-center justify-between">
             <Link href="/">
               <Icons.logo_dashboard className="" />
@@ -40,7 +41,7 @@ const DashboardHeader = ({
           </div>
         </div>
       ) : (
-        <div className="mx-5">
+        <div className={`${pathname.startsWith('/dashboard/create/') ? "hidden" : ""} mx-5 md:px-10 md:pt-10`}>
           <Link className="flex max-md:mt-4 items-center md:gap-[10px] font-bold text-xl text-brand-blue-200" href="/dashboard">
             <Icons.back_icon />
             Back
