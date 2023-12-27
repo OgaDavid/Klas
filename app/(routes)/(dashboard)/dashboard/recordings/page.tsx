@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 const DashboardRecordingsPage = () => {
   return (
-    <div>DashboardRecordingsPage</div>
+    <main className='px-10'>DashboardRecordingsPage</main>
   )
 }
 

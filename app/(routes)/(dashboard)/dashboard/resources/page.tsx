@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 const DashboardResourcesPage = () => {
   return (
-    <div>DashboardResourcesPage</div>
+    <main className='px-10'>DashboardResourcesPage</main>
   )
 }
 
