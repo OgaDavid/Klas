@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import { Icons } from "../icons";
-import UserAvatar from "./avatar";
+import { Icons } from "../../../../components/icons";
+import UserAvatar from "./dashboard-avatar";
 import DashboardNavItem from "./dashboard-nav-item";
 import { usePathname } from "next/navigation";
 

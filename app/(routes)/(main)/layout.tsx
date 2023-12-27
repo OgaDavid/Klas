@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
+import MainHeader from "@/app/(routes)/(main)/components/main-header";
+import MainFooter from "@/app/(routes)/(main)/components/main-footer";
 
 export default function LandingPageLayout({
   children,
@@ -9,9 +9,9 @@ export default function LandingPageLayout({
 }) {
   return (
     <div>
-      <Header />
+      <MainHeader />
       {children}
-      <Footer />
+      <MainFooter />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import AuthCarousel from "@/components/auth/auth-carousel";
+import AuthCarousel from "@/app/(routes)/(auth)/components/auth-carousel";
 import React from "react";
 import { Metadata } from "next";
 

@@ -2,9 +2,9 @@
 
 import React from "react";
 import CountUp from "react-countup";
-import { FAQ } from "@/components/faq";
+import { FAQ } from "@/app/(routes)/(main)/components/main-faq";
 import { CompanyFAQ } from "@/data/data";
-import PageHeaders from "@/components/page-headers";
+import PageHeaders from "@/app/(routes)/(main)/components/main-page-headers";
 import Image from "next/image";
 
 const CompanyPage = () => {

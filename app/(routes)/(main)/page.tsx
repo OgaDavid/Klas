@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Icons } from "@/components/icons";
-import Stats from "@/components/stats";
+import Stats from "@/app/(routes)/(main)/components/main-stats";
 import {
   BeforeData,
   ExplainerData,
@@ -12,9 +12,9 @@ import {
   Features_Section_one,
   Features_Section_two,
 } from "@/data/data";
-import { Feature, FeatureCard } from "@/components/feature-card";
-import CallToAction from "@/components/call-to-action";
-import TestimonialSection from "@/components/testimonial-section";
+import { Feature, FeatureCard } from "@/app/(routes)/(main)/components/main-feature-card";
+import CallToAction from "@/app/(routes)/(main)/components/main-call-to-action";
+import TestimonialSection from "@/app/(routes)/(main)/components/main-testimonial-section";
 
 export default function HomePage() {
   return (

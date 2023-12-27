@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import React from "react";
-import { Icons } from "../icons";
+import { Icons } from "../../../../components/icons";
 import { usePathname } from "next/navigation";
 
 const DashboardNavItem = ({

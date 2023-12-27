@@ -1,5 +1,6 @@
 import React from 'react'
 import { Metadata } from 'next'
+import ProfileImageUpload from './components/settings-profile-image-upload'
 
 export const metadata: Metadata = {
     title: "Dashboard Settings"
@@ -8,9 +9,9 @@ export const metadata: Metadata = {
 const DashboardSettingsPage = () => {
 
   return (
-    <div className='flex px-10'>
-      <main></main>
-    </div>
+      <main>
+        <ProfileImageUpload />
+      </main>
   )
 }
 

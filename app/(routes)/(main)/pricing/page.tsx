@@ -2,12 +2,12 @@ import React from "react";
 import Link from "next/link";
 // import FrequentlyAskedQuestions from "../components/FAQ";
 // import { PricingFaqData } from "@/data/Data";
-import CallToAction from "@/components/call-to-action";
-import PageHeaders from "@/components/page-headers";
+import CallToAction from "@/app/(routes)/(main)/components/main-call-to-action";
+import PageHeaders from "@/app/(routes)/(main)/components/main-page-headers";
 import Image from "next/image";
 import { Icons } from "@/components/icons";
 import { PlusPerks, PricingFAQ } from "@/data/data";
-import { FAQ } from "@/components/faq";
+import { FAQ } from "@/app/(routes)/(main)/components/main-faq";
 
 const PricingPage = () => {
   return (

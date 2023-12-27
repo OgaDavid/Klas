@@ -1,8 +1,8 @@
 import React from "react";
 import { Metadata } from "next";
-import DashboardHeader from "@/components/dashboard/dashboard-header";
+import DashboardHeader from "@/app/(routes)/(dashboard)/components/dashboard-header";
 import getSession from "@/actions/get-user-session";
-import DashboardNavigation from "@/components/dashboard/dashboard-navigation";
+import DashboardNavigation from "@/app/(routes)/(dashboard)/components/dashboard-navigation";
 
 export const metadata: Metadata = {
   title: {

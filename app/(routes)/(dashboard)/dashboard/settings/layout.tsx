@@ -1,6 +1,7 @@
 import React from "react";
 import { getServerSession } from "next-auth";
-import DashboardSettingsSideNav from "@/components/dashboard/dashboard-settings-nav";
+import DashboardSettingsSideNav from "@/app/(routes)/(dashboard)/dashboard/settings/components/settings-side-nav";
+import SettingsHeader from "@/app/(routes)/(dashboard)/dashboard/settings/components/settings-header";
 
 export default async function DashboardSettingsLayout({
   children,
@@ -12,7 +13,10 @@ export default async function DashboardSettingsLayout({
   return (
     <div className="flex px-10">
       <DashboardSettingsSideNav session={session} />
-      <div className="p-10">{children}</div>
+      <div className="p-10">
+        <SettingsHeader />
+        {children}
+      </div>
     </div>
   );
 }

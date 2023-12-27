@@ -1,7 +1,7 @@
 import React from "react";
 import { CaseStudiesData } from "@/data/data";
-import CaseStudyCard from "@/components/case-study-card";
-import PageHeaders from "@/components/page-headers";
+import CaseStudyCard from "@/app/(routes)/(main)/components/main-case-study-card";
+import PageHeaders from "@/app/(routes)/(main)/components/main-page-headers";
 import Image from "next/image";
 
 const CaseStudiesPage = () => {

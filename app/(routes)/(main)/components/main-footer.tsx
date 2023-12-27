@@ -1,10 +1,10 @@
 import React from "react";
 import Link from "next/link";
-import { Icons } from "./icons";
+import { Icons } from "../../../../components/icons";
 import { docsConfig } from "@/config/docs";
 import { siteConfig } from "@/config/site";
 
-const Footer = () => {
+const MainFooter = () => {
   return (
     <footer className="bg-brand-blue-200">
       <div className="container">
@@ -65,4 +65,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default MainFooter;

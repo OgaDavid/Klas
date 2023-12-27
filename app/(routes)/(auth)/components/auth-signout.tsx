@@ -2,7 +2,7 @@
 import { signOut } from "next-auth/react";
 import React from "react";
 import { siteConfig } from "@/config/site";
-import { Icons } from "../icons";
+import { Icons } from "../../../../components/icons";
 
 const SignOutButton = () => {
   return (

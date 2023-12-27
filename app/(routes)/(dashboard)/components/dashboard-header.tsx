@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import { Icons } from "../icons";
+import { Icons } from "../../../../components/icons";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import UserAvatar from "./avatar";
+import UserAvatar from "./dashboard-avatar";
 import { usePathname } from "next/navigation";
 
 const DashboardHeader = ({

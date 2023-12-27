@@ -3,12 +3,12 @@
 import Link from "next/link";
 import { useState } from "react";
 import { docsConfig } from "@/config/docs";
-import { Icons } from "./icons";
+import { Icons } from "../../../../components/icons";
 import MainNav from "./main-nav";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
-const Header = () => {
+const MainHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
@@ -100,4 +100,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default MainHeader;
