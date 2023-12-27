@@ -371,3 +371,21 @@ export const CaseStudiesData = [
     overlayImg: "/images/landing-page/case-study/genz.svg",
   },
 ];
+
+export const DashboardStats: DashboardStat[] = [
+  {
+    title: "Total Students",
+    type: "students",
+    icon: "/images/dashboard/total-students.svg",
+  },
+  {
+    title: "Total Classes",
+    type: "classes",
+    icon: "/images/dashboard/total-classes.svg",
+  },
+  {
+    title: "Total Earnings",
+    type: "earnings",
+    icon: "/images/dashboard/total-earnings.svg",
+  },
+]

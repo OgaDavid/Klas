@@ -180,6 +180,10 @@
   box-shadow: 0 4px 20px rgba(0,0,0,.08);
 }
 
+.dashboard-stats-shadow {
+  box-shadow: 0 5.6652px 28.326px rgba(0,0,0,.1);
+}
+
 .scale-image:hover img {
   transform: scale(1.05);
   transition: all .8s ease-in;

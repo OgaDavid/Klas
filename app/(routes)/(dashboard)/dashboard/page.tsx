@@ -1,28 +1,30 @@
 import React from "react";
 import { Metadata } from "next";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/app/api/auth/[...nextauth]/options";
-import SignOutButton from "@/components/auth/signout";
+import { DashboardStats } from "@/data/data";
+import StatCard from "@/components/dashboard/stats-card";
 
 export const metadata: Metadata = {
   title: "Dashboard Home",
 };
 
-const DashboardHome = async () => {
-  const session = await getServerSession(authOptions);
-
+const DashboardHome = () => {
   return (
-    <div className="md:px-10">
-      {/*<SignOutButton /> */}
+    <div className="md:px-10 mt-8">
+      <div className="grid mb-20 max-md:hidden max-lg:grid-cols-2 grid-cols-3 gap-8">
+        {DashboardStats.map((stat, idx) => (
+          <div key={idx}>
+            <StatCard stat={stat} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
 
 export default DashboardHome;
 
-
 // todo
-// fix login form password error
 // build out the 3 boxes on dashboard home - total students, earnings and classes
 // fix overflowing in the dashboard navigation
 // finish lesson and ebook create page
+// finish settings page
