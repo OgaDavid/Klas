@@ -19,3 +19,10 @@ const DashboardHome = async () => {
 };
 
 export default DashboardHome;
+
+
+// todo
+// fix login form password error
+// build out the 3 boxes on dashboard home - total students, earnings and classes
+// fix overflowing in the dashboard navigation
+// finish lesson and ebook create page

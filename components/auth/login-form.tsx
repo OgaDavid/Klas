@@ -84,7 +84,9 @@ export default function LoginForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="mb-5 text-lg font-medium">
+              <FormLabel className={`mb-5 text-lg font-medium ${
+                  LoginForm.formState.errors.email && "text-black"
+                }`}>
                 Email Address
                 <span className="text-[#ff6868]"> *</span>
               </FormLabel>
@@ -100,17 +102,15 @@ export default function LoginForm() {
           name="password"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="mb-5 text-lg font-medium">
+              <FormLabel className={`mb-5 text-lg font-medium ${
+                  LoginForm.formState.errors.password && "text-black"
+                }`}>
                 Password
                 <span className="text-[#ff6868]"> *</span>
               </FormLabel>
               <FormControl>
                 <Input disabled={loading} placeholder="Enter your password" {...field} />
               </FormControl>
-              <FormDescription className="text-sm opacity-0 text-muted-foreground">
-                Password: At least 8 characters, alphanumeric, upper & lower
-                case.
-              </FormDescription>
               <FormMessage />
             </FormItem>
           )}
