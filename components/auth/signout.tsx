@@ -1,17 +1,18 @@
 "use client";
 import { signOut } from "next-auth/react";
 import React from "react";
-import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
+import { Icons } from "../icons";
 
 const SignOutButton = () => {
   return (
-    <Button
-      variant="secondary"
+    <button
       onClick={() => signOut({ callbackUrl: `${siteConfig.url}/login` })}
+      className="flex items-center justify-center px-6 text-brand-blue-100 font-bold gap-[10px]"
     >
-      Sign Out
-    </Button>
+      <Icons.dashboard_settings_logout />
+      Logout
+    </button>
   );
 };
 

@@ -10,13 +10,7 @@ import { usePathname } from "next/navigation";
 const DashboardHeader = ({
   session,
 }: {
-  session:
-    | {
-        name?: string | null | undefined;
-        email?: string | null | undefined;
-        image?: string | null | undefined;
-      }
-    | undefined;
+  session: UserSession| undefined;
 }) => {
   const pathname = usePathname();
 

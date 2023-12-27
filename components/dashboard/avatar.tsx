@@ -1,15 +1,18 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const UserAvatar = ({ imageUrl }: { imageUrl: string | null | undefined }) => {
   return (
-    <Image
-      className="rounded-full "
-      src={imageUrl || "/images/dashboard/avatar-fallback.png"}
-      alt="user's image"
-      width={36}
-      height={36}
-    />
+    <Link href="/dashboard/settings">
+      <Image
+        className="rounded-full "
+        src={imageUrl || "/images/dashboard/avatar-fallback.png"}
+        alt="user's image"
+        width={40}
+        height={40}
+      />
+    </Link>
   );
 };
 

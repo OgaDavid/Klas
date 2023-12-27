@@ -6,8 +6,11 @@ export const metadata: Metadata = {
 }
 
 const DashboardSettingsPage = () => {
+
   return (
-    <div>DashboardSettingsPage</div>
+    <div className='flex px-10'>
+      <main></main>
+    </div>
   )
 }
 

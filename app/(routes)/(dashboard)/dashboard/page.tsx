@@ -24,7 +24,6 @@ const DashboardHome = () => {
 export default DashboardHome;
 
 // todo
-// build out the 3 boxes on dashboard home - total students, earnings and classes
 // fix overflowing in the dashboard navigation
 // finish lesson and ebook create page
 // finish settings page

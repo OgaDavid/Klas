@@ -687,6 +687,53 @@ export const Icons = {
       ></path>
     </svg>
   ),
+  dashboard_settings_profile: (props: IconProps) => (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      fill="none"
+    >
+      <path
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-width="2"
+        d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1m-8-10a4 4 0 1 1 0-8 4 4 0 0 1 0 8Z"
+      ></path>
+    </svg>
+  ),
+  dashboard_settings_bank: (props: IconProps) => (
+    <svg
+      {...props}
+      width="24"
+      height="24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g clip-path="url(#bank_svg__a)" fill="currentColor">
+        <path d="M2.333 9.039 12 3.485l9.666 5.554a.667.667 0 0 0 .667-1.154L12 1.945 1.666 7.885a.667.667 0 1 0 .667 1.154ZM2.668 17.334a.667.667 0 0 0 .667.667h17.333a.667.667 0 0 0 0-1.334h-2v-4.913h-1.333v4.913h-4.667v-4.913h-1.333v4.913H6.668v-4.913H5.335v4.913h-2a.667.667 0 0 0-.667.667ZM3.346 9.332h17.333v1.333H3.346V9.332ZM21.999 19.332h-20a.667.667 0 0 0 0 1.333h20a.667.667 0 0 0 0-1.333Z"></path>
+        <path d="M14.767 7.719h2.14l-4.474-2.573a.534.534 0 0 0-.533 0L7.42 7.719h2.14l2.6-1.493 2.607 1.493Z"></path>
+      </g>
+      <defs>
+        <clipPath id="bank_svg__a">
+          <path fill="#fff" d="M0 0h24v24H0z"></path>
+        </clipPath>
+      </defs>
+    </svg>
+  ),
+  dashboard_settings_logout: (props: IconProps) => (
+    <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+      <path
+        fill="#1127E3"
+        d="M4.5 22.5h9A1.502 1.502 0 0 0 15 21v-2.25h-1.5V21h-9V3h9v2.25H15V3a1.502 1.502 0 0 0-1.5-1.5h-9A1.502 1.502 0 0 0 3 3v18a1.501 1.501 0 0 0 1.5 1.5Z"
+      ></path>
+      <path
+        fill="#1127E3"
+        d="m15.44 15.44 2.689-2.69H7.5v-1.5h10.629l-2.69-2.69L16.5 7.5 21 12l-4.5 4.5-1.06-1.06Z"
+      ></path>
+    </svg>
+  ),
   dashboard_active_arrow: (props: IconProps) => (
     <svg
       {...props}

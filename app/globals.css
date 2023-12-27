@@ -142,11 +142,11 @@
 }
 
 .auth-swiper-slide {
-  @apply flex flex-col justify-center text-center items-center
+  @apply flex flex-col justify-center text-center items-center;
 }
 
 .pricing-list li {
-  @apply flex text-left font-normal text-base leading-[18px] items-start justify-start mb-[22px] gap-[18px]
+  @apply flex text-left font-normal text-base leading-[18px] items-start justify-start mb-[22px] gap-[18px];
 }
 
 .pricing-sub-list {
@@ -154,44 +154,53 @@
 }
 
 .btn-gradient {
-  background: linear-gradient(86.89deg,#1127e3,#7a46fd);
+  background: linear-gradient(86.89deg, #1127e3, #7a46fd);
 }
 
 .outline-button:hover {
-  background: linear-gradient(86.89deg,#1127e3,#7a46fd);
+  background: linear-gradient(86.89deg, #1127e3, #7a46fd);
   color: white;
 }
 
 .box-shadow {
-  box-shadow: 0 4px 20px rgba(0,0,0,.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .login-btn:hover {
   color: white;
   border: none;
-  background: linear-gradient(86.89deg,#1127e3,#7a46fd);
+  background: linear-gradient(86.89deg, #1127e3, #7a46fd);
 }
 
 .dashboard-packages-bg {
-  background: linear-gradient(250deg,#1127e3,#7a46fd);
+  background: linear-gradient(250deg, #1127e3, #7a46fd);
 }
 
 .box-shadow-two {
-  box-shadow: 0 4px 20px rgba(0,0,0,.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .dashboard-stats-shadow {
-  box-shadow: 0 5.6652px 28.326px rgba(0,0,0,.1);
+  box-shadow: 0 5.6652px 28.326px rgba(0, 0, 0, 0.1);
+}
+
+.clip-user-email {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow-y: hidden;
+  width: 158px;
+  overflow-wrap: break-word;
 }
 
 .scale-image:hover img {
   transform: scale(1.05);
-  transition: all .8s ease-in;
+  transition: all 0.8s ease-in;
   cursor: pointer;
 }
 
 .case-study-card {
-  -webkit-filter: drop-shadow(0 4px 25px rgba(0,0,0,.1))!important
+  -webkit-filter: drop-shadow(0 4px 25px rgba(0, 0, 0, 0.1)) !important;
 }
 
 .no-scrollbar::-webkit-scrollbar {
@@ -199,7 +208,6 @@
   -ms-overflow-style: none;
   --webkit-scrollbar: none;
 }
-
 
 @media screen and (max-width: 920px) {
   .grid_row_1 {
@@ -214,7 +222,7 @@
 }
 
 @media screen and (max-width: 650px) {
-.features_grid {
+  .features_grid {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 }

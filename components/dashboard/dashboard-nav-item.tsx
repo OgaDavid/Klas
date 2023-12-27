@@ -23,14 +23,14 @@ const DashboardNavItem = ({
         <Link
           href={item.href}
           className={`${
-            pathname === item.href && "group is-active bg-white/50"
+            pathname === item.href || pathname.includes("/settings/bank-details") && item.name === "Settings" ? "group is-active bg-white/50" : ""
           } lg:w-[50px] lg:h-[50px] w-10 h-10 flex items-center justify-center rounded-full bg-white`}
         >
           {item.icon}
         </Link>
         <p className="max-md-920:text-xs">{item.name}</p>
         <Icons.dashboard_active_arrow
-          className={`${pathname === item.href ? "" : "opacity-0"} pt-2`}
+          className={`${pathname === item.href || pathname.includes("/settings/bank-details") && item.name === "Settings" ? "" : "opacity-0"} pt-2`}
         />
       </div>
     </div>
