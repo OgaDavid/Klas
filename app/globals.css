@@ -184,6 +184,10 @@
   box-shadow: 0 5.6652px 28.326px rgba(0, 0, 0, 0.1);
 }
 
+textarea {
+  resize: none;
+}
+
 .clip-user-email {
   display: -webkit-box;
   -webkit-line-clamp: 1;
