@@ -19,7 +19,7 @@ export default async function DashboardLayout({
   const session = await getSession();
 
   return (
-    <div>
+    <div className="pb-10">
       <DashboardHeader session={session} />
       <DashboardNavigation session={session} />
       {children}
