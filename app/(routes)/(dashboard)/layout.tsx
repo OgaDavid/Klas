@@ -21,7 +21,7 @@ export default async function DashboardLayout({
   return (
     <div className="pb-10">
       <DashboardHeader session={session} />
-      <div className="">
+      <div className="flex">
         <DashboardNavigation session={session} />
       </div>
       {children}
