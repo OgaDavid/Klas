@@ -20,15 +20,7 @@ import { useRouter } from "next/navigation";
 import { signIn } from "next-auth/react"
 import { toast } from "sonner";
 import { Loader2 } from "lucide-react";
-
-const LoginFormSchema = z.object({
-  email: z.string().email({
-    message: "Please enter a valid email.",
-  }),
-  password: z.string().min(8, {
-    message: "Password must be at least 8 characters.",
-  }),
-});
+import { LoginFormSchema } from "@/schemas";
 
 export default function LoginForm() {
   const LoginForm = useForm<z.infer<typeof LoginFormSchema>>({
