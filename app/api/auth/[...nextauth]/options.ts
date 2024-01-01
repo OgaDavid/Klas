@@ -2,7 +2,9 @@ import type { NextAuthOptions, User as NextAuthUser } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import prismadb from "@/lib/prismadb";
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
+import { LoginFormSchema } from "@/schemas";
+import { getUserByEmail } from "@/data/user";
 
 interface User extends NextAuthUser {
   phoneNumber: string;
@@ -34,26 +36,25 @@ export const authOptions: NextAuthOptions = {
       },
       async authorize(credentials) {
 
-        const { email, password } = credentials as {
-          email: string; 
-          password: string
+        const verifiedCredentials = LoginFormSchema.safeParse(credentials);
+
+        if (!verifiedCredentials.success) {
+          throw new Error ("Invalid fields")
         }
+
+        const { email, password } = verifiedCredentials.data
 
         if (!email || !password) {
           return null;
         }
 
-        const user = await prismadb.user.findUnique({
-          where: {
-            email
-          }
-        })
+        const user = await getUserByEmail(email);
 
         if (!user) {
           throw new Error('Invalid email or password')
         }
 
-        const passwordsMatch = await bcrypt.compare(password, user.hashedPassword as string);
+        const passwordsMatch = await bcrypt.compare(password, user.password as string);
 
         if (!passwordsMatch) {
           throw new Error('Invalid email or password')

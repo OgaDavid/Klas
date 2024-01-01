@@ -1,22 +1,26 @@
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import prismadb from "@/lib/prismadb";
 import { NextResponse } from "next/server";
+import { RegisterFormSchema } from "@/schemas";
+import { getUserByEmail } from "@/data/user";
 
 export async function POST(req: Request) {
     try {
         const userData = await req.json();
 
-        const {name, email, password, phoneNumber} = await userData;
+        const validatedFields = RegisterFormSchema.safeParse(userData);
+
+        if (!validatedFields.success) {
+            return new NextResponse("Invalid fields")
+        }
+
+        const {name, email, password, phoneNumber} = validatedFields.data;
 
         if(!name || !email || !password || !phoneNumber) {
             return new NextResponse("Missing full name, email, password or phone number", { status: 400 })
         }
 
-        const userExists = await prismadb.user.findUnique({
-            where: {
-                email: email
-            }
-        })
+        const userExists = await getUserByEmail(email);
 
         if ( userExists ) {
             return new NextResponse("Email already in use. Please log in or reset password if forgotten.", { status: 400 });
@@ -28,7 +32,7 @@ export async function POST(req: Request) {
             data: {
                 name,
                 email,
-                hashedPassword,
+                password: hashedPassword,
                 phoneNumber
             }
         })
