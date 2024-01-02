@@ -2,7 +2,7 @@ import bcrypt from "bcryptjs";
 import prismadb from "@/lib/prismadb";
 import { NextResponse } from "next/server";
 import { RegisterFormSchema } from "@/schemas";
-import { getUserByEmail } from "@/data/user";
+import { getUserByEmail } from "@/actions/get-user";
 
 export async function POST(req: Request) {
     try {

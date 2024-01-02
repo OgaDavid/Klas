@@ -5,6 +5,7 @@ import { Icons } from "../../../../components/icons";
 import UserAvatar from "./dashboard-avatar";
 import DashboardNavItem from "./dashboard-nav-item";
 import { usePathname } from "next/navigation";
+import { useSession } from "next-auth/react";
 
 export const DashboardNavigationItems = [
   {
@@ -49,17 +50,12 @@ export const DashboardNavigationItems = [
   },
 ];
 
-const DashboardNavigation = ({
-  session,
-}: {
-  session:
-    | {
-        name?: string | null | undefined;
-        email?: string | null | undefined;
-        image?: string | null | undefined;
-      }
-    | undefined;
-}) => {
+const DashboardNavigation = () => {
+
+  const { data: userSession } = useSession();
+
+  const user = userSession?.user
+
 
     const pathname = usePathname();
 
@@ -81,7 +77,7 @@ const DashboardNavigation = ({
           </div>
         </div>
         <span className="md:hidden">
-          <UserAvatar imageUrl={session?.image} />
+          <UserAvatar imageUrl={user?.image} />
         </span>
       </div>
       <div className="flex items-center max-w-[820px] w-full justify-between mx-auto">

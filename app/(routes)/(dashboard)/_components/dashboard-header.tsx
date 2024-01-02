@@ -6,12 +6,14 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import UserAvatar from "./dashboard-avatar";
 import { usePathname } from "next/navigation";
+import { useSession } from "next-auth/react";
 
-const DashboardHeader = ({
-  session,
-}: {
-  session: UserSession| undefined;
-}) => {
+const DashboardHeader = () => {
+
+  const { data: userSession } = useSession();
+
+  const user = userSession?.user
+
   const pathname = usePathname();
 
   const createContent = pathname.match("/dashboard/create");
@@ -30,7 +32,7 @@ const DashboardHeader = ({
                   Create a content
                 </Button>
               </Link>
-              <UserAvatar imageUrl={session?.image} />
+              <UserAvatar imageUrl={user?.image} />
             </span>
           </div>
         </div>

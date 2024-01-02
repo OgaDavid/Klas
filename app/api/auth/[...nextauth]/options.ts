@@ -4,7 +4,7 @@ import { PrismaAdapter } from "@auth/prisma-adapter";
 import prismadb from "@/lib/prismadb";
 import bcrypt from 'bcryptjs';
 import { LoginFormSchema } from "@/schemas";
-import { getUserByEmail } from "@/data/user";
+import { getUserByEmail } from "@/actions/get-user";
 
 interface User extends NextAuthUser {
   phoneNumber: string;
@@ -43,10 +43,6 @@ export const authOptions: NextAuthOptions = {
         }
 
         const { email, password } = verifiedCredentials.data
-
-        if (!email || !password) {
-          return null;
-        }
 
         const user = await getUserByEmail(email);
 

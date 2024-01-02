@@ -1,7 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
 import DashboardHeader from "@/app/(routes)/(dashboard)/_components/dashboard-header";
-import getSession from "@/actions/get-user-session";
 import DashboardNavigation from "@/app/(routes)/(dashboard)/_components/dashboard-navigation";
 
 export const metadata: Metadata = {
@@ -16,14 +15,11 @@ export default async function DashboardLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const session = await getSession();
 
   return (
     <div className="pb-10">
-      <DashboardHeader session={session} />
-      <div>
-        <DashboardNavigation session={session} />
-      </div>
+      <DashboardHeader />
+      <DashboardNavigation />
       {children}
     </div>
   );
