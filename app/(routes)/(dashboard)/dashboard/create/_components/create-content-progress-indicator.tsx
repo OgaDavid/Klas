@@ -2,7 +2,6 @@
 
 import React from "react";
 import { usePathname } from "next/navigation";
-import { siteConfig } from "@/config/site";
 
 const CreateContentProgressIndicator = () => {
   const pathname = usePathname();
