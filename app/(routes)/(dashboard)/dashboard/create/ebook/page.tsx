@@ -1,5 +1,7 @@
 import React from 'react'
 import { Metadata } from 'next'
+import CreateLayoutContainer from '../_components/create-layout'
+import CreateEbookForm from '../_components/create-ebook-form'
 
 export const metadata: Metadata = {
   title: {
@@ -10,7 +12,9 @@ export const metadata: Metadata = {
 
 const CreateEbookPage = () => {
   return (
-    <div>CreateEbookPage</div>
+    <CreateLayoutContainer>
+      <CreateEbookForm />
+    </CreateLayoutContainer>
   )
 }
 
