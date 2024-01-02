@@ -4,7 +4,7 @@ import { PrismaAdapter } from "@auth/prisma-adapter";
 import prismadb from "@/lib/prismadb";
 import bcrypt from "bcryptjs";
 import { LoginFormSchema } from "@/schemas";
-import { getUserByEmail, getUserById } from "@/actions/get-user";
+import { getUserByEmail } from "@/actions/get-user";
 
 interface User extends NextAuthUser {
   id: string;
@@ -69,49 +69,33 @@ export const authOptions: NextAuthOptions = {
   ],
   callbacks: {
     async jwt({ token, user }) {
-      console.log("jwt callback", { token });
-      
+
+      // pass in user id and phone number to jwt token
+
       if (user) {
-        const {
-          id,
-          phoneNumber,
-          about,
-          jobTitle,
-          bankName,
-          bankAccountName,
-          bankAccountNumber,
-        } = user as User;
+        const { id, phoneNumber } = user as User
         return {
           ...token,
           id,
-          phoneNumber,
-          about,
-          jobTitle,
-          bankName,
-          bankAccountName,
-          bankAccountNumber,
-        };
+          phoneNumber
+        }
       }
 
-      return token;
+      return token
     },
 
     async session({ session, token }) {
-      console.log({ sessionToken: token, session });
 
-      const userDetails = await getUserById(token.sub as string);
-      // console.log(userDetails);
+      // pass in user id and phone number to session
 
-      if (userDetails) {
-        session.user.id = userDetails.id;
-        session.user.phoneNumber = userDetails.phoneNumber;
-        session.user.about = userDetails.about;
-        session.user.jobTitle = userDetails.jobTitle;
-        session.user.bankName = userDetails.bankName;
-        session.user.bankAccountName = userDetails.bankAccountName;
-        session.user.bankAccountNumber = userDetails.bankAccountNumber;
+      return {
+        ...session,
+        user: {
+          ...session.user,
+          id: token.id,
+          phoneNumber: token.phoneNumber
+        }
       }
-      return session;
     },
   },
   pages: {
