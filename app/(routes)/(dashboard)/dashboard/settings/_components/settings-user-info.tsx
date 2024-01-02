@@ -1,5 +1,5 @@
 import React from "react";
-import UserAvatar from "../../../components/dashboard-avatar";
+import UserAvatar from "../../../_components/dashboard-avatar";
 import { Session } from "next-auth";
 
 const SidebarUserInfo = ({ session }: { session: Session | null }) => {

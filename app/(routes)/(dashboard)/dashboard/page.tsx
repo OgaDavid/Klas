@@ -1,7 +1,7 @@
 import React from "react";
 import { Metadata } from "next";
 import { DashboardStats } from "@/data/data";
-import StatCard from "@/app/(routes)/(dashboard)/components/dashboard-stats-card";
+import StatCard from "@/app/(routes)/(dashboard)/_components/dashboard-stats-card";
 
 export const metadata: Metadata = {
   title: "Dashboard Home",

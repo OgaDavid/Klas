@@ -1,6 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
-import RegisterForm from "@/app/(routes)/(auth)/components/auth-register-form";
+import RegisterForm from "@/app/(routes)/(auth)/_components/auth-register-form";
 
 export const metadata: Metadata = {
   title: "Register",

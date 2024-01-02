@@ -1,7 +1,7 @@
 import React from "react";
 import { getServerSession } from "next-auth";
-import DashboardSettingsSideNav from "@/app/(routes)/(dashboard)/dashboard/settings/components/settings-side-nav";
-import SettingsHeader from "@/app/(routes)/(dashboard)/dashboard/settings/components/settings-header";
+import DashboardSettingsSideNav from "@/app/(routes)/(dashboard)/dashboard/settings/_components/settings-side-nav";
+import SettingsHeader from "@/app/(routes)/(dashboard)/dashboard/settings/_components/settings-header";
 
 export default async function DashboardSettingsLayout({
   children,

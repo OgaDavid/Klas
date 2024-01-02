@@ -1,8 +1,8 @@
 import React from "react";
-import SideBarUserInfo from "@/app/(routes)/(dashboard)/dashboard/settings/components/settings-user-info"
+import SideBarUserInfo from "@/app/(routes)/(dashboard)/dashboard/settings/_components/settings-user-info"
 import SettingsSideNavItems from "./settings-side-nav-items";
 import { Session } from "next-auth";
-import SignOutButton from "../../../../(auth)/components/auth-signout";
+import SignOutButton from "../../../../(auth)/_components/auth-signout";
 
 const DashboardSettingsSideNav = ({ session }: { session: Session | null }) => {
   return (
