@@ -2,14 +2,19 @@ import type { NextAuthOptions, User as NextAuthUser } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import prismadb from "@/lib/prismadb";
-import bcrypt from 'bcryptjs';
+import bcrypt from "bcryptjs";
 import { LoginFormSchema } from "@/schemas";
-import { getUserByEmail } from "@/actions/get-user";
+import { getUserByEmail, getUserById } from "@/actions/get-user";
 
 interface User extends NextAuthUser {
+  id: string;
+  jobTitle: string;
   phoneNumber: string;
+  about: string;
+  bankName: string;
+  bankAccountNumber: string;
+  bankAccountName: string;
 }
-
 
 export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prismadb),
@@ -35,61 +40,78 @@ export const authOptions: NextAuthOptions = {
         },
       },
       async authorize(credentials) {
-
         const verifiedCredentials = LoginFormSchema.safeParse(credentials);
 
         if (!verifiedCredentials.success) {
-          throw new Error ("Invalid fields")
+          throw new Error("Invalid fields");
         }
 
-        const { email, password } = verifiedCredentials.data
+        const { email, password } = verifiedCredentials.data;
 
         const user = await getUserByEmail(email);
 
         if (!user) {
-          throw new Error('Invalid email or password')
+          throw new Error("Invalid email or password");
         }
 
-        const passwordsMatch = await bcrypt.compare(password, user.password as string);
+        const passwordsMatch = await bcrypt.compare(
+          password,
+          user.password as string
+        );
 
         if (!passwordsMatch) {
-          throw new Error('Invalid email or password')
+          throw new Error("Invalid email or password");
         }
 
         return user;
-       
       },
     }),
   ],
   callbacks: {
-    async jwt({ token, user, session }) {
-
-      // pass in user id and phone number to jwt token
-
+    async jwt({ token, user }) {
+      console.log("jwt callback", { token });
+      
       if (user) {
-        const { id, phoneNumber } = user as User
+        const {
+          id,
+          phoneNumber,
+          about,
+          jobTitle,
+          bankName,
+          bankAccountName,
+          bankAccountNumber,
+        } = user as User;
         return {
           ...token,
           id,
-          phoneNumber
-        }
+          phoneNumber,
+          about,
+          jobTitle,
+          bankName,
+          bankAccountName,
+          bankAccountNumber,
+        };
       }
 
-      return token
+      return token;
     },
 
-    async session({ session, user, token }) {
+    async session({ session, token }) {
+      console.log({ sessionToken: token, session });
 
-      // pass in user id and phone number to session
+      const userDetails = await getUserById(token.sub as string);
+      // console.log(userDetails);
 
-      return {
-        ...session,
-        user: {
-          ...session.user,
-          id: token.id,
-          phoneNumber: token.phoneNumber
-        }
+      if (userDetails) {
+        session.user.id = userDetails.id;
+        session.user.phoneNumber = userDetails.phoneNumber;
+        session.user.about = userDetails.about;
+        session.user.jobTitle = userDetails.jobTitle;
+        session.user.bankName = userDetails.bankName;
+        session.user.bankAccountName = userDetails.bankAccountName;
+        session.user.bankAccountNumber = userDetails.bankAccountNumber;
       }
+      return session;
     },
   },
   pages: {
