@@ -4,7 +4,7 @@ import { PrismaAdapter } from "@auth/prisma-adapter";
 import prismadb from "@/lib/prismadb";
 import bcrypt from "bcryptjs";
 import { LoginFormSchema } from "@/schemas";
-import { getUserByEmail } from "@/actions/get-user";
+import { getUserByEmail, getUserById } from "@/actions/get-user";
 
 interface User extends NextAuthUser {
   id: string;
@@ -68,34 +68,42 @@ export const authOptions: NextAuthOptions = {
     }),
   ],
   callbacks: {
-    async jwt({ token, user }) {
+    async jwt({ token }) {
+      // pass in user id and details to jwt token
 
-      // pass in user id and phone number to jwt token
+      const user = await getUserById(token.sub as string);
 
       if (user) {
-        const { id, phoneNumber } = user as User
-        return {
-          ...token,
-          id,
-          phoneNumber
-        }
+        token.id = user.id
+        token.phoneNumber = user.phoneNumber
+        token.about = user.about
+        token.jobTitle = user.jobTitle
+        token.bankName = user.bankName
+        token.bankAccountName = user.bankAccountName
+        token.bankAccountNumber = user.bankAccountNumber
       }
+
+      console.log("jwt callback", {token})
 
       return token
     },
 
     async session({ session, token }) {
 
-      // pass in user id and phone number to session
-
-      return {
-        ...session,
-        user: {
-          ...session.user,
-          id: token.id,
-          phoneNumber: token.phoneNumber
-        }
+      // pass in other user details to session
+      if (token) {
+        session.user.id = token.id as string
+        session.user.about = token.about as string
+        session.user.phoneNumber = token.phoneNumber as string
+        session.user.jobTitle = token.jobTitle as string
+        session.user.bankName = token.bankName as string
+        session.user.bankAccountName = token.bankAccountName as string
+        session.user.bankAccountNumber = token.bankAccountNumber as string
       }
+
+      console.log("session callback", {session})
+
+      return session
     },
   },
   pages: {

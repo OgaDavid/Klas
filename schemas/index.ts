@@ -32,4 +32,12 @@ export const LoginFormSchema = z.object({
       message: "Password must be at least 8 characters.",
     }),
   });
+
+  export const CreateCourseFormSchema = z.object({
+    title: z.string(),
+    description: z.string().max(150, {message: "Course description is too long"}),
+    category: z.string(),
+    topic: z.string(),
+    madeFor: z.string(),
+  })
   

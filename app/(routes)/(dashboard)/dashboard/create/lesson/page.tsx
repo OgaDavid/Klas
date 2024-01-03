@@ -1,7 +1,7 @@
 import React from 'react'
 import { Metadata } from 'next'
 import CreateLayoutContainer from '../_components/create-layout'
-import CreateLessonForm from '../_components/create-lesson-form'
+import CreateCourseForm from '../_components/create-course-form'
 
 export const metadata: Metadata = {
   title: {
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const CreateLessonPage = () => {
   return (
     <CreateLayoutContainer>
-      <CreateLessonForm />
+      <CreateCourseForm />
     </CreateLayoutContainer>
   )
 }

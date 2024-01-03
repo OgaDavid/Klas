@@ -17,7 +17,7 @@ export default async function DashboardLayout({
   children: React.ReactNode;
 }) {
   const session = await getSession();
-  console.log(session)
+  console.log(session?.phoneNumber)
 
   return (
     <div className="pb-10">

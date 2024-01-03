@@ -1,17 +1,17 @@
-// import NextAuth, { type DefaultSession } from "next-auth";
+import NextAuth, { type DefaultSession } from "next-auth";
 
-// export type ExtendedUser = DefaultSession["user"] & {
-//   id: string;
-//   phoneNumber: string | null;
-//   jobTitle: String | null;
-//   about: String | null;
-//   bankAccountNumber: String | null;
-//   bankAccountName: String | null;
-//   bankName: String | null;
-// };
+export type ExtendedUser = {
+  id: string;
+  phoneNumber: string | null;
+  jobTitle: String | null;
+  about: String | null;
+  bankAccountNumber: String | null;
+  bankAccountName: String | null;
+  bankName: String | null;
+};
 
-// declare module "next-auth" {
-//   interface Session {
-//     user: ExtendedUser;
-//   }
-// }
+declare module "next-auth" {
+  interface Session extends DefaultSession{
+    user: ExtendedUser & DefaultSession["user"]
+  }
+}
