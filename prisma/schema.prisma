@@ -7,6 +7,27 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+enum ContentCategory {
+  AI
+  Product
+  Marketing
+  Business
+  Leadership
+  Design
+  Engineering
+  Investing
+  Productivity
+  Writing
+  Data
+  Sales
+  Other
+}
+
+enum CurrencyType {
+  NGN
+  USD
+}
+
 model Account {
   id                String  @id @default(cuid())
   userId            String
@@ -40,5 +61,41 @@ model User {
   bankAccountName   String?
   bankName          String?
   emailVerified     DateTime?
+  courses           Course[]
   accounts          Account[]
+}
+
+model Lesson {
+  id       String @id @default(cuid())
+  name     String
+  videoUrl String
+  courseId String
+
+  course Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
+}
+
+model FAQ {
+  id       String @id @default(cuid())
+  question String
+  answer   String
+  courseId String
+  course   Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
+}
+
+/// Course content
+model Course {
+  id              String          @id @default(cuid())
+  title           String
+  description     String
+  category        ContentCategory
+  topicsCovered   String[]
+  madeFor         String[]
+  previewVideoUrl String?
+  lessons         Lesson[]
+  creatorId       String
+  coursePrice     Int?
+  currency        CurrencyType?
+  faqs            FAQ[]
+
+  creator User @relation(fields: [creatorId], references: [id], onDelete: Cascade)
 }
