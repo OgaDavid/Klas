@@ -2,6 +2,7 @@ import NextAuth, { type DefaultSession } from "next-auth";
 
 export type ExtendedUser = {
   id: string;
+  username: string | null;
   phoneNumber: string | null;
   jobTitle: String | null;
   about: String | null;

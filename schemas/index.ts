@@ -33,6 +33,24 @@ export const LoginFormSchema = z.object({
     }),
   });
 
+ export  const UpdateProfileFormSchema = z.object({
+    name: z.string().min(2, {
+      message: "Full name must be at least 3 characters.",
+    }),
+    jobTitle: z.string().min(2, {
+      message: "Job title must be at least 3 characters.",
+    }),
+    username: z.string().min(2, {
+      message: "Username must be at least 3 characters.",
+    }),
+    phoneNumber: z.string().min(10, {
+      message: "Phone number must be at least 10 characters.",
+    }),
+    about: z.string().min(10, {
+      message: "About must be at least 10 characters.",
+    }),
+  });
+
   export const CreateCourseFormSchema = z.object({
     title: z.string(),
     description: z.string().max(150, {message: "Course description is too long"}),

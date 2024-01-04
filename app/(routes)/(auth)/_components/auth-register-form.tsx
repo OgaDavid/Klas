@@ -43,11 +43,15 @@ export default function RegisterForm() {
     try {
       setLoading(true);
 
-      const response = await axios.post('/api/auth/register-user', userData);
+      const response = await axios.post('/api/auth/user/register-user', userData);
 
-      toast.info("User Created Successfully 🎉");
+      if (response.status === 200) {
+        
+        toast.info("User Created Successfully 🎉");
 
-      router.push("/login");
+        router.push("/login");
+      }
+
       
     } catch (error : any) {
       toast.error(error.request.response)

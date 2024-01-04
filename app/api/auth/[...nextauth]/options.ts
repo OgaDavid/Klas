@@ -59,13 +59,14 @@ export const authOptions: NextAuthOptions = {
   ],
   callbacks: {
     async jwt({ token }) {
-      
+
       // pass in user id and other details to jwt token
 
       const user = await getUserById(token.sub as string);
 
       if (user) {
         token.id = user.id
+        token.username = user.username
         token.phoneNumber = user.phoneNumber
         token.about = user.about
         token.jobTitle = user.jobTitle
@@ -83,6 +84,7 @@ export const authOptions: NextAuthOptions = {
 
       if (token) {
         session.user.id = token.id as string
+        session.user.username = token.username as string
         session.user.about = token.about as string
         session.user.phoneNumber = token.phoneNumber as string
         session.user.jobTitle = token.jobTitle as string
