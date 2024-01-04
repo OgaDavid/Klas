@@ -1,20 +1,10 @@
-import type { NextAuthOptions, User as NextAuthUser } from "next-auth";
+import type { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import prismadb from "@/lib/prismadb";
 import bcrypt from "bcryptjs";
 import { LoginFormSchema } from "@/schemas";
 import { getUserByEmail, getUserById } from "@/actions/get-user";
-
-interface User extends NextAuthUser {
-  id: string;
-  jobTitle: string;
-  phoneNumber: string;
-  about: string;
-  bankName: string;
-  bankAccountNumber: string;
-  bankAccountName: string;
-}
 
 export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prismadb),
@@ -69,7 +59,8 @@ export const authOptions: NextAuthOptions = {
   ],
   callbacks: {
     async jwt({ token }) {
-      // pass in user id and details to jwt token
+      
+      // pass in user id and other details to jwt token
 
       const user = await getUserById(token.sub as string);
 
@@ -83,14 +74,13 @@ export const authOptions: NextAuthOptions = {
         token.bankAccountNumber = user.bankAccountNumber
       }
 
-      console.log("jwt callback", {token})
-
       return token
     },
 
     async session({ session, token }) {
 
-      // pass in other user details to session
+      // pass in other user details to session from token
+
       if (token) {
         session.user.id = token.id as string
         session.user.about = token.about as string
@@ -100,8 +90,6 @@ export const authOptions: NextAuthOptions = {
         session.user.bankAccountName = token.bankAccountName as string
         session.user.bankAccountNumber = token.bankAccountNumber as string
       }
-
-      console.log("session callback", {session})
 
       return session
     },
