@@ -9,20 +9,26 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 import { Input } from "@/components/ui/input";
 import { useForm } from "react-hook-form";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import { CreateCourseFormSchema } from "@/schemas";
 import { Textarea } from "@/components/ui/textarea";
+import { ContentCategory } from "@/data/data";
 
 export default function CreateCourseForm() {
   const [loading, setLoading] = React.useState(false);
@@ -31,6 +37,10 @@ export default function CreateCourseForm() {
     resolver: zodResolver(CreateCourseFormSchema),
     defaultValues: {
       title: "",
+      description: "",
+      category: "",
+      // topics: [""],
+      // madeFor: [""]
     },
   });
 
@@ -40,13 +50,11 @@ export default function CreateCourseForm() {
     try {
       setLoading(true);
 
-      const response = await axios.post("/api/auth/register-user", userData);
+      console.log(userData)
 
-      toast.info("User Created Successfully 🎉");
-
-      router.push("/login");
+      
     } catch (error: any) {
-      toast.error(error.request.response);
+      toast.error(error);
 
       console.log(error);
     } finally {
@@ -111,9 +119,36 @@ export default function CreateCourseForm() {
               </FormItem>
             )}
           />
+          <FormField
+            control={CreateCourseForm.control}
+            name="category"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel
+                  className="mb-5 text-lg font-medium text-black"
+                >
+                  Select Category
+                  <span className="text-[#ff6868]"> *</span>
+                </FormLabel>
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <FormControl>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select a category" />
+                  </SelectTrigger>
+                </FormControl>
+                <SelectContent>
+                  {ContentCategory.map((category) => (
+                    <SelectItem key={category} value={category}>{category}</SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
           <div className="mt-[45px] flex items-center justify-center gap-10 flex-col">
             <Button
-              disabled={loading}
+              disabled={loading || !CreateCourseForm.formState.isValid}
               className="px-8 w-[300px] gap-2 h-[50px] flex items-center justify-center rounded-[8px] font-bold py-4 text-white btn-gradient"
               type="submit"
             >
@@ -127,12 +162,6 @@ export default function CreateCourseForm() {
                 "Continue"
               )}
             </Button>
-            <small className="text-sm text-[rgba(0,0,0,.5)]">
-              Already have an account?{" "}
-              <Link href="/login" className="text-brand-blue-100 font-medium">
-                Sign In
-              </Link>
-            </small>
           </div>
         </form>
       </Form>

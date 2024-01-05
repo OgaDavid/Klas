@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { useRouter } from "next/navigation";
 import { Textarea } from "@/components/ui/textarea";
 import { DefaultSession } from "next-auth";
 import { ExtendedUser } from "@/types/next-auth";
@@ -33,8 +32,6 @@ const SettingsUpdateProfile = ({
     },
   });
 
-  const router = useRouter();
-
   const onSubmit = async (
     userData: z.infer<typeof UpdateProfileFormSchema>
   ) => {
@@ -42,6 +39,7 @@ const SettingsUpdateProfile = ({
       setLoading(true);
 
       const res = await axios.post("/api/auth/user/update-user-profile", userData)
+      console.log(res);
 
       if (res.status === 200) {
         toast.info("Your profile has been updated successfully 🎉")

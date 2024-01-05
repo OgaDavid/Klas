@@ -388,4 +388,19 @@ export const DashboardStats: DashboardStat[] = [
     type: "earnings",
     icon: "/images/dashboard/total-earnings.svg",
   },
-]
+];
+
+export const ContentCategory = [
+  "AI",
+  "Marketing",
+  "Business",
+  "Leadership",
+  "Design",
+  "Engineering",
+  "Investing",
+  "Productivity",
+  "Writing",
+  "Data",
+  "Sales",
+  "Other",
+];
