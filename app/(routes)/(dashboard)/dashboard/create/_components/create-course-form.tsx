@@ -40,8 +40,8 @@ export default function CreateCourseForm() {
       title: "",
       description: "",
       category: "",
-      topics: ["", "", ""],
-      // madeFor: [""]
+      topics: [""],
+      madeFor: [""]
     },
   });
 
@@ -194,16 +194,66 @@ export default function CreateCourseForm() {
               );
             })}
           </AnimatePresence>
+          <div className="mb-5 text-lg font-medium text-black">
+            Who is this course for
+            <span className="text-[#ff6868]"> *</span>
+          </div>
+          <AnimatePresence>
+            {CreateCourseForm.watch("madeFor").map((_, index) => {
+              return (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{
+                    opacity: { duration: 0.2 },
+                    height: { duration: 0.2 },
+                  }}
+                  key={index}
+                >
+                  <FormField
+                    control={CreateCourseForm.control}
+                    name={`madeFor.${index}`}
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormControl>
+                          <div>
+                            <X
+                              onClick={() => {
+                                CreateCourseForm.setValue(
+                                  "madeFor",
+                                  CreateCourseForm.watch("madeFor").filter(
+                                    (item, i) => i !== index
+                                  )
+                                );
+                              }}
+                              className={`${
+                                index === 0 ? "hidden" : ""
+                              } my-[10px] w-4 h-4 cursor-pointer ml-auto mr-[10px]`}
+                            />
+                            <Input
+                              placeholder="E.g Designers, Marketers"
+                              {...field}
+                            />
+                          </div>
+                        </FormControl>
+                      </FormItem>
+                    )}
+                  />
+                </motion.div>
+              );
+            })}
+          </AnimatePresence>
           <div
             onClick={() => {
-              CreateCourseForm.setValue("topics", [
-                ...CreateCourseForm.watch("topics"),
+              CreateCourseForm.setValue("madeFor", [
+                ...CreateCourseForm.watch("madeFor"),
                 "",
               ]);
             }}
             className="text-lg cursor-pointer text-[rgba(0,0,0,.5)]"
           >
-            + Add another topic
+            + Add another person
           </div>
           <div className="mt-[45px] flex items-center justify-center gap-10 flex-col">
             <Button

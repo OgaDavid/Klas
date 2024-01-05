@@ -60,6 +60,6 @@ export const LoginFormSchema = z.object({
     }).max(150, {message: "Course description is too long"}),
     category: z.string(),
     topics: z.array(z.string()),
-    // madeFor: z.array(z.string()),
+    madeFor: z.array(z.string()),
   })
   
