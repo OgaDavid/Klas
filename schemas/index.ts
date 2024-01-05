@@ -59,7 +59,7 @@ export const LoginFormSchema = z.object({
       required_error: "Course description is required",
     }).max(150, {message: "Course description is too long"}),
     category: z.string(),
-    // topics: z.array(z.string()),
+    topics: z.array(z.string()),
     // madeFor: z.array(z.string()),
   })
   

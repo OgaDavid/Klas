@@ -20,15 +20,16 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
+} from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
-import { Loader2 } from "lucide-react";
+import { Loader2, X } from "lucide-react";
 import { toast } from "sonner";
 import { CreateCourseFormSchema } from "@/schemas";
 import { Textarea } from "@/components/ui/textarea";
 import { ContentCategory } from "@/data/data";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function CreateCourseForm() {
   const [loading, setLoading] = React.useState(false);
@@ -39,7 +40,7 @@ export default function CreateCourseForm() {
       title: "",
       description: "",
       category: "",
-      // topics: [""],
+      topics: ["", "", ""],
       // madeFor: [""]
     },
   });
@@ -50,9 +51,7 @@ export default function CreateCourseForm() {
     try {
       setLoading(true);
 
-      console.log(userData)
-
-      
+      console.log(userData);
     } catch (error: any) {
       toast.error(error);
 
@@ -75,9 +74,7 @@ export default function CreateCourseForm() {
             name="title"
             render={({ field }) => (
               <FormItem>
-                <FormLabel
-                  className="mb-5 text-lg font-medium text-black"
-                >
+                <FormLabel className="mb-5 text-lg font-medium text-black">
                   Course Title
                   <span className="text-[#ff6868]"> *</span>
                 </FormLabel>
@@ -101,9 +98,7 @@ export default function CreateCourseForm() {
             name="description"
             render={({ field }) => (
               <FormItem>
-                <FormLabel
-                  className="mb-5 text-lg font-medium text-black"
-                >
+                <FormLabel className="mb-5 text-lg font-medium text-black">
                   Course Description
                   <span className="text-[#ff6868]"> *</span>
                 </FormLabel>
@@ -124,28 +119,92 @@ export default function CreateCourseForm() {
             name="category"
             render={({ field }) => (
               <FormItem>
-                <FormLabel
-                  className="mb-5 text-lg font-medium text-black"
-                >
+                <FormLabel className="mb-5 text-lg font-medium text-black">
                   Select Category
                   <span className="text-[#ff6868]"> *</span>
                 </FormLabel>
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
-                <FormControl>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Select a category" />
-                  </SelectTrigger>
-                </FormControl>
-                <SelectContent>
-                  {ContentCategory.map((category) => (
-                    <SelectItem key={category} value={category}>{category}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+                <Select
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                >
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select a category" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    {ContentCategory.map((category) => (
+                      <SelectItem key={category} value={category}>
+                        {category}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
                 <FormMessage />
               </FormItem>
             )}
           />
+          <div className="mb-5 text-lg font-medium text-black">
+            Topics we will cover
+            <span className="text-[#ff6868]"> *</span>
+          </div>
+          <AnimatePresence>
+            {CreateCourseForm.watch("topics").map((_, index) => {
+              return (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{
+                    opacity: { duration: 0.2 },
+                    height: { duration: 0.2 },
+                  }}
+                  key={index}
+                >
+                  <FormField
+                    control={CreateCourseForm.control}
+                    name={`topics.${index}`}
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormControl>
+                          <div>
+                            <X
+                              onClick={() => {
+                                CreateCourseForm.setValue(
+                                  "topics",
+                                  CreateCourseForm.watch("topics").filter(
+                                    (item, i) => i !== index
+                                  )
+                                );
+                              }}
+                              className={`${
+                                index === 0 ? "hidden" : ""
+                              } my-[10px] w-4 h-4 cursor-pointer ml-auto mr-[10px]`}
+                            />
+                            <Input
+                              placeholder="Tip: Highlight the main points you'll teach"
+                              {...field}
+                            />
+                          </div>
+                        </FormControl>
+                      </FormItem>
+                    )}
+                  />
+                </motion.div>
+              );
+            })}
+          </AnimatePresence>
+          <div
+            onClick={() => {
+              CreateCourseForm.setValue("topics", [
+                ...CreateCourseForm.watch("topics"),
+                "",
+              ]);
+            }}
+            className="text-lg cursor-pointer text-[rgba(0,0,0,.5)]"
+          >
+            + Add another topic
+          </div>
           <div className="mt-[45px] flex items-center justify-center gap-10 flex-col">
             <Button
               disabled={loading || !CreateCourseForm.formState.isValid}
