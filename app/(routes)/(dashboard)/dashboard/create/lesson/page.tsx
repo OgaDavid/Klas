@@ -13,6 +13,7 @@ export const metadata: Metadata = {
 const CreateLessonPage = () => {
   return (
     <CreateLayoutContainer>
+      {/* <Image src={} alt='' width={} height={}/> */}
       <CreateCourseForm />
     </CreateLayoutContainer>
   )

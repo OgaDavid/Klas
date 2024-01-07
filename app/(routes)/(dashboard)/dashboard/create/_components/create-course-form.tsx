@@ -194,6 +194,17 @@ export default function CreateCourseForm() {
               );
             })}
           </AnimatePresence>
+          <div
+            onClick={() => {
+              CreateCourseForm.setValue("topics", [
+                ...CreateCourseForm.watch("topics"),
+                "",
+              ]);
+            }}
+            className="text-lg cursor-pointer text-[rgba(0,0,0,.5)]"
+          >
+            + Add another topic
+          </div>
           <div className="mb-5 text-lg font-medium text-black">
             Who is this course for
             <span className="text-[#ff6868]"> *</span>

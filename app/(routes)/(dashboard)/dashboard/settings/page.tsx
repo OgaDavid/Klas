@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const DashboardSettingsPage = async () => {
 
   const session = await getSession()
-  console.log(session)
+  // console.log(session)
 
   return (
       <main>
