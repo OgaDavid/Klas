@@ -63,7 +63,7 @@ export default function CreateCourseForm() {
   };
 
   return (
-    <div className="mt-[100px] mx-auto relative box-shadow-two bg-white py-[50px] px-[70px] rounded-[24px] max-w-[943px] flex items-center">
+    <div className="max-md-800:mt-10 mt-[100px] mx-auto relative max-md-800:shadow-none shadow-lg bg-white max-md-800:pt-0 py-[50px] max-md-800:px-0 px-[70px] max-md-800:rounded-none rounded-[24px] max-w-[943px] flex items-center">
       <Form {...CreateCourseForm}>
         <form
           onSubmit={CreateCourseForm.handleSubmit(onSubmit)}
