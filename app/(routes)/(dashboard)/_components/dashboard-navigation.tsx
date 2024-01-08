@@ -60,11 +60,11 @@ const DashboardNavigation = () => {
     const pathname = usePathname();
 
   return (
-    <div className={`${pathname.startsWith('/dashboard/create') ? "hidden" : ""} px-6 md:mx-10 md:pt-8 md:rounded-2xl flex flex-col dashboard-packages-bg items-center text-white justify-center`}>
+    <div className={`${pathname.startsWith('/dashboard/create') ? "hidden" : ""} md:mx-10 md:pt-8 md:rounded-2xl flex flex-col dashboard-packages-bg items-center text-white justify-center`}>
       <h2 className="font-medium max-md:hidden text-4xl">
         What will you teach today?
       </h2>
-      <div className="mx-auto w-full mt-[30px] mb-10 flex items-center justify-center gap-5">
+      <div className="mx-auto w-full px-6 mt-[30px] mb-10 flex items-center justify-center gap-5">
         <div className="w-full md-920:w-[800px]">
           <div className="flex items-center justify-center">
             <span className="bg-white rounded-l-[8px] py-[14px] px-[3px]">
@@ -80,7 +80,7 @@ const DashboardNavigation = () => {
           <UserAvatar imageUrl={user?.image} />
         </span>
       </div>
-      <div className="flex items-center max-w-[820px] w-full justify-between mx-auto">
+      <div className="flex max-md-500:px-0 px-6 md-500:w-full md-500:max-w-[900px] mx-auto justify-between max-md-500:grid max-md-500:grid-cols-5">
         {DashboardNavigationItems.map((item) => (
           <div key={item.name}>
             <DashboardNavItem item={item} />
