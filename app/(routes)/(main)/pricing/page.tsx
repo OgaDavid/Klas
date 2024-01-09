@@ -185,11 +185,13 @@ const PricingPage = () => {
         </div>
       </section>
 
-      {/* <FrequentlyAskedQuestions data={PricingFaqData} /> */}
-
       <FAQ faqs={PricingFAQ} />
 
-      <CallToAction />
+      <CallToAction
+        heading="Ready to start teaching?"
+        paragraph="Use Klas to create and manage your online academy"
+        buttonText="Sign up free"
+      />
     </main>
   );
 };
