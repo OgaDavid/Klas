@@ -390,6 +390,60 @@ export const DashboardStats: DashboardStat[] = [
   },
 ];
 
+export const ProductsCardData = [
+  {
+    name: "Virtual bootcamps",
+    img: "/images/landing-page/products/bootcamps.png",
+  },
+  {
+    name: "Fellowship",
+    img: "/images/landing-page/products/fellowship.png",
+  },
+  {
+    name: "Workshops",
+    img: "/images/landing-page/products/workshops.png",
+  },
+  {
+    name: "Webinars",
+    img: "/images/landing-page/products/webinars.png",
+  },
+  {
+    name: "Coaching",
+    img: "/images/landing-page/products/coaching.png",
+  },
+  {
+    name: "Employee Training",
+    img: "/images/landing-page/products/training.png",
+  },
+];
+
+export const PreBuiltFeatures = [
+  {
+    name: "Record class",
+    img: "images/landing-page/products/record.svg"
+  },
+  {
+    name: "Kick out students",
+    img: "/images/landing-page/products/kick-out.svg"
+  },
+  {
+    name: "Screenshare",
+    img: "/images/landing-page/products/screenshare.svg"
+  },
+  {
+    name: "HD video & audio",
+    img: "/images/landing-page/products/hd.svg"
+  },
+  {
+    name: "In-built chat",
+    img: "/images/landing-page/products/chat.svg"
+  },
+  {
+    name: "Mute students",
+    img: "/images/landing-page/products/mute.svg"
+  },
+]
+
 export const ContentCategory = [
   "AI",
   "Marketing",

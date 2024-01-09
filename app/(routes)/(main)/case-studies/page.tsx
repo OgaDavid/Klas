@@ -8,6 +8,7 @@ const CaseStudiesPage = () => {
   return (
     <main>
       <PageHeaders
+        lg
         textColor="black"
         paragraph="See how top communities, online schools, and brands globally are using Klas to power live learning for their students."
         text="Customer Case Studies"

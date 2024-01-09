@@ -8,6 +8,7 @@ interface PageHeadersProps {
   md?: boolean;
   pb?: boolean;
   sm?: boolean;
+  lg?: boolean;
 }
 
 const PageHeaders = ({
@@ -18,6 +19,7 @@ const PageHeaders = ({
   md,
   pb,
   sm,
+  lg
 }: PageHeadersProps) => {
   return (
     <section className={`${gradient && "gradient"}`}>
@@ -34,10 +36,12 @@ const PageHeaders = ({
           >
             <h1
               className={`max-md:text-[32px] max-md:leading-[42px] max-md:mb-[16px] mb-[25px] ${
-                md && "md:text-[48px] leading-[62px]"
+                md && "md:text-5xl"
               } ${
-                sm ? "md:text-[56px] " : "md:text-[64px] "
-              } md:leading-[73px] font-bold`}
+                sm && "md:text-[56px]"
+              } md:leading-[73px] font-bold
+                ${lg && "text-[64px]"}
+              `} 
             >
               {text}
             </h1>

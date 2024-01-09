@@ -12,7 +12,10 @@ import {
   Features_Section_one,
   Features_Section_two,
 } from "@/data/data";
-import { Feature, FeatureCard } from "@/app/(routes)/(main)/components/main-feature-card";
+import {
+  Feature,
+  FeatureCard,
+} from "@/app/(routes)/(main)/components/main-feature-card";
 import CallToAction from "@/app/(routes)/(main)/components/main-call-to-action";
 import TestimonialSection from "@/app/(routes)/(main)/components/main-testimonial-section";
 
@@ -220,7 +223,11 @@ export default function HomePage() {
 
       <TestimonialSection />
 
-      <CallToAction />
+      <CallToAction
+        buttonText="Sign up free"
+        heading="Ready to start teaching?"
+        paragraph="Use Klas to create and manage your online academy"
+      />
     </main>
   );
 }
