@@ -46,7 +46,7 @@ const ProductsPage = () => {
                 />
               </div>
               <div className="lg-1150:w-485px flex flex-col gap-6 flex-1">
-                <h3 className="text-4xl leading-[31px] font-bold tab:text-4xl md:leading-[47px]">
+                <h3 className="md:text-4xl font-bold text-2xl">
                   Customize your experience
                 </h3>
                 <p className="text-base md:text-[20px] md:leading-[26px]">
@@ -79,7 +79,7 @@ const ProductsPage = () => {
                 />
               </div>
               <div className="lg-1150:w-485px flex flex-col gap-6 flex-1">
-                <h3 className="text-4xl leading-[31px] font-bold tab:text-4xl md:leading-[47px]">
+                <h3 className="md:text-4xl font-bold text-2xl">
                   Magic Board
                 </h3>
                 <p className="text-base md:text-[20px] md:leading-[26px]">
