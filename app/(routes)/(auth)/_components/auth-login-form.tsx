@@ -49,7 +49,7 @@ export default function LoginForm() {
       console.log(res);
 
       if (res?.error) {
-        toast.error(res.error + ' 🤒');
+        toast.error('Something went wrong. Please try again later. 🤒');
         LoginForm.reset();
       }
 
