@@ -22,7 +22,7 @@ const CallToAction = ({heading, paragraph, buttonText} : CallToActionProps) => {
           </div>
           <Link
             className="md:text-[20px] font-medium rounded-[8px] py-[14px] px-[28px] text-brand-purple-100 md:leading-[28px] md:py-[16px] md:px-[50px] bg-white"
-            href="/signup"
+            href="/login"
           >
             {buttonText}
           </Link>
